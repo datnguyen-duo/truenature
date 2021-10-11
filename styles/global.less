@@ -1,0 +1,295 @@
+@1920: ~"only screen and (max-width : 1920px)";
+@1800: ~"only screen and (max-width : 1800px)";
+@1500: ~"only screen and (max-width : 1500px)";
+@1300: ~"only screen and (max-width : 1300px)";
+@1200: ~"only screen and (max-width : 1220px)";
+@1100: ~"only screen and (max-width : 1100px)";
+@1020: ~"only screen and (max-width : 1020px)";
+@750: ~"only screen and (max-width : 750px)";
+@680: ~"only screen and (max-width : 680px)";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;400;700&display=swap');
+
+#viewport {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  #scroll-container {
+    position: absolute;  
+    overflow: hidden;
+    width: 100%;
+    // height: 300%;
+    // z-index: 10;
+    // display: flex;
+    // justify-content: center;  
+    // backface-visibility: hidden;
+    // transform-style: preserve-3d;
+    
+    // background-image:
+    //   linear-gradient(rgba(255,255,255,.07) 2px, transparent 2px),
+    //   linear-gradient(90deg, rgba(255,255,255,.07) 2px, transparent 2px),
+    //   linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+    //   linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+    // background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    // background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  }
+
+//Fonts
+.font1B{
+    font-family: 'Lexend Exa';
+    font-style: normal;
+    font-weight: 700;
+}
+
+.font1R{
+    font-family: 'Lexend Exa';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.font1L{
+    font-family: 'Lexend Exa';
+    font-style: normal;
+    font-weight: 300;
+}
+
+
+.font2R{
+    font-family:"usual";
+    font-style:normal;
+    font-weight:400;
+}
+
+.font2M{
+    font-family:"usual";
+    font-style:normal;
+    font-weight:600;
+}
+
+.font2B{
+    font-family:"usual";
+    font-style:normal;
+    font-weight:700;
+}
+
+
+//Colors
+@color1: #161616;
+@color2: #005941;
+@color3: #DFCF00;
+
+.transition(@el: all, @speed: 400ms, @tf: ease, @delay: 0ms) {
+    -webkit-transition: @el @speed @tf @delay;
+    -moz-transition: @el @speed @tf @delay;
+    -o-transition: @el @speed @tf @delay;
+    transition: @el @speed @tf @delay;
+}
+
+.fade_in(@opacityStart: 0, @opacityEnd: 1, @speed: 1s, @delay: 100ms) {
+    opacity: @opacityStart;
+    .transition(all, @speed, ease, @delay);
+
+    &.in_view {
+        opacity: @opacityEnd;
+    }
+}
+
+.slide_up(@position: relative, @topStart: 40px, @topEnd: 0 ,@opacityStart: 0, @opacityEnd: 1, @speed: .7s, @delay: 0s) {
+    position: @position;
+    top: @topStart;
+    opacity: @opacityStart;
+    .transition(all, @speed, ease, @delay);
+
+    &.in_view {
+        top: @topEnd;
+        opacity: @opacityEnd;
+    }
+}
+
+.image_reveal{
+    position: relative;
+
+    &:after{
+        content: '';
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        .transition(all, 2000ms, ease-in-out);
+    }
+
+    img{
+        transform: scale(1.2);
+        .transition(all, 2000ms, ease-in-out);
+    }
+
+    &.in_view{
+        img{
+            transform: scale(1);
+        }
+        &:after{
+            height: 0%;
+        }
+    }
+}
+
+.no_scroll {
+    overflow: hidden;
+}
+
+#page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    footer {
+        margin-top: auto;
+    }
+}
+
+body {
+    .font2B();
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    * {
+        font-weight: normal;
+    }
+}
+
+.text{
+    font-size: 0.9vw;
+    color: @color1;
+    .font2R();
+    line-height: 1.6em;
+
+    @media @1500{
+        // font-size: 16px;
+    }
+}
+
+
+
+.main_headline{
+    color: @color1;
+    font-size: 12vw;
+    .font1R();
+    text-transform: uppercase;
+    letter-spacing: 11.5px;
+}
+
+.big_headline{
+    font-size: 6vw;
+    color: @color2;
+    .font1R();
+    text-transform: uppercase;
+}
+
+.medium_headline{
+    color: @color1;
+    font-size: 4vw;
+    .font1R();
+    text-transform: uppercase;
+}
+
+.small_headline{
+    color: @color1;
+    font-size: 1.8vw;
+    .font1R();
+    text-transform: uppercase;
+}
+
+.cropped_img {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loader{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: @color1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loader_content{
+        text-align: center;
+
+        .loader_logo{
+            width: 10vw;
+            margin: auto;
+            // animation: menuRotation 5s infinite linear;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .description_holder{
+            margin-top: 2.5vw;
+            position: relative;
+            overflow: hidden;
+            min-height: 4vw;
+            min-width: 50vw;
+
+            .single_description{
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                opacity: 1;
+
+                &.second{
+                    opacity: 0;
+                }
+
+                p{
+                    .font2R();
+                    color: #898989;
+                    font-size: 1.1vw;
+                    margin-bottom: 1vw;
+
+                    span{
+                        color: #fff;
+                        .font2B();
+                    }
+
+                    &.description{
+                        .font2R();
+                        margin-bottom: 0vw;
+                        text-transform: uppercase;
+                        color: #fff;
+                        font-size: 1.1vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import "footer";
+@import "header";
+@import "tmpl-home";

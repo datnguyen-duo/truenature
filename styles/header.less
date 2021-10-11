@@ -1,0 +1,167 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    .header_content{
+        display: flex;
+        justify-content: space-between;
+        padding: 2vw 2.2vw;
+        box-sizing: border-box;
+    }
+
+    .logo{
+        width: 4.4vw;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        .transition();
+
+        &.visible{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &.menuOpen{
+            visibility: visible;
+            opacity: 1;
+            
+            img{
+                &.white{
+                    opacity: 1;
+                    z-index: 2;
+                }
+    
+                &.black{
+                    opacity: 0;
+                }
+            }
+        }
+
+        img{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: contain;
+            .transition();
+
+            &.white{
+                opacity: 0;
+                z-index: 2;
+            }
+
+            &.black{
+                opacity: 1;
+            }
+        }
+    }
+
+    .menu_opener{
+        position: relative;
+        cursor: pointer;
+
+        img{
+            width: 4.4vw;
+            position: relative;
+            // animation: menuRotation 5s infinite linear;
+        }
+        
+        p{
+            .text();
+            .font2M();
+            text-transform: uppercase;
+            color: @color3;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover{
+
+            img{
+                animation-play-state: paused;
+            }
+
+            // .marquee{
+            //     animation-play-state: running;
+            // }
+        }
+    }
+}
+
+.nav_holder{
+    position: fixed;
+    z-index: 900;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0vh;
+    visibility: hidden;
+    background-color: @color1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    nav{
+        ul{
+            li{
+                margin-bottom: 0.2vw;
+                text-align: center;
+                position: relative;
+                opacity: 0;
+                top: 100px;
+
+                a{
+                    .big_headline();
+                    .font1R();
+                    color: #fff;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    position: relative;
+                    left: 0;
+                    .transition();
+    
+                    &:before{
+                        content: '//';
+                        position: absolute;
+                        left: -5vw;
+                        .big_headline();
+                        .font2M();
+                        color: #fff;
+                        opacity: 0;
+                        visibility: hidden;
+                        .transition();
+                    }
+                }
+    
+                &:hover{
+                    a{
+                        left: 1vw;
+    
+                        &:before{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@-webkit-keyframes menuRotation {
+	0% {
+		transform: rotate(0deg);
+    }
+    50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
