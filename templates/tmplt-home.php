@@ -115,7 +115,7 @@ get_header(); ?>
             <div class="fourth_section_content fadein_wrap">
                 <h2>//we asked our clients</h2>
 
-                <div class="testemonials">
+                <div class="testimonials">
                     <div class="single_testimonial">
                         <p class="question">
                             HOW HAS VINIYOGA BENEFITTED YOU?
