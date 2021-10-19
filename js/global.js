@@ -1,6 +1,11 @@
 (function ($) {
   //document ready
   $(document).ready(function () {
+
+    $(".single_question").on("click", function (event) {
+      $(this).toggleClass("active");
+      $(this).find("p").slideToggle();
+    });
     // function initScroll() {
     //     new SmoothScroll(document, 20, 12);
     // }

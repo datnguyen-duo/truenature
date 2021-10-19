@@ -1,0 +1,173 @@
+.template_classes{
+    .hero_content_inner{
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 14.5vw 5vw 16vw 5vw;
+        max-width: 80vw;
+        margin: auto;
+        opacity: 1;
+        top: 0px;
+    
+        h1{
+            .main_headline_small();
+            margin-bottom: 4vw;
+        }
+    
+        a{
+            .text();
+            .font2M();
+            letter-spacing: 1.6px;
+            max-width: 29vw;
+            margin: auto;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+
+            img{
+                margin-left: 1vw;
+                position: relative;
+            }
+        }
+    }
+
+    .first_section{
+        margin-bottom: 10vw;
+
+       .first_section_content{
+           display: flex;
+           flex-wrap: wrap;
+
+           .left{
+               width: 55%;
+               display: flex;
+               justify-content: flex-end;
+               flex-direction: column;
+
+               .left_content{
+                    padding-bottom: 9vw;
+                    box-sizing: border-box;
+
+                    h2{
+                        // max-width: 40vw;
+                        position: relative;
+                        right: -7vw;
+                        .medium_headline();
+                        text-align: right;
+                        font-size: 3vw;
+                        z-index: 2;
+                    }
+                }
+                
+            }
+
+           .right{
+                width: 45%;
+                position: relative;
+
+                .white_lines{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 2;
+                    width: 20vw;
+                }
+
+                .image_holder{
+                    position: relative;
+                    padding-top: 109%;
+                    overflow: hidden;
+
+                    img{
+                        .cropped_img();
+                    }
+                }
+            }
+       } 
+    }
+
+    .second_section{
+        margin-bottom: 10vw;
+
+        .second_section_content{
+            padding: 0 11vw;
+            .tools{
+                .tools_wrap{
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .single_tool{
+                        width: 25%;
+                        padding-right: 3vw;
+                        box-sizing: border-box;
+
+                        p{
+                            .text();
+                            text-align: left;
+                            margin-bottom: 0px;
+                            border-top: 1px solid @color1;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .third_section{
+        margin-bottom: 14vw;
+
+
+       .third_section_content{
+           .image_holder{
+               text-align: center;
+           }
+
+            .classes_list{
+
+                .classes_list_content{
+                    .single_class{
+                        display: flex;
+                        position: relative;
+
+                        
+                        .left{
+                            width: 50%;
+                            padding-right: 5vw;
+                            box-sizing: border-box;
+
+                            h3{
+                                .medium_headline();
+                                text-align: right;
+
+                                &:after{
+                                    content: '';
+                                    width: 3.5vw;
+                                    height: 1px;
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 30%;
+                                    transform: translate(-50%, -50%);
+                                    background-color: @color1;
+                                }
+                            }
+                            p{
+                                .text();
+                                text-transform: uppercase;
+                                text-align: right;
+                            }
+                        }
+
+                        .right{
+                            width: 50%;
+                            padding-left: 5vw;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+           }
+       } 
+    }
+
+}
