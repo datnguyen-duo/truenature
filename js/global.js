@@ -107,7 +107,7 @@
       let loader = $(".loader");
       let shape1 = $(".shape1, .glow1");
       let shape2 = $(".shape2, .glow2");
-      let hero_content = $(".hero_content");
+      // let hero_content = $(".hero_content");
 
       tl.to(firstDescription, { opacity: 0, duration: 0.7, delay: 1 });
       tl.to(secondDescription, { opacity: 1, duration: 0.7 });
@@ -115,11 +115,11 @@
       tl.to(loader, { height: "0%" });
       tl.to(shape1, { opacity: 1, duration: 0.7 });
       tl.to(shape2, { opacity: 1, duration: 0.7 });
-      tl.to(
-        hero_content,
-        { opacity: 1, top: "0px", duration: 0.7, ease: "power2.inOut" },
-        "<"
-      );
+      // tl.to(
+      //   hero_content,
+      //   { opacity: 1, top: "0px", duration: 0.7, ease: "power2.inOut" },
+      //   "<"
+      // );
     } else {
       $(".loader").css("display", "none");
 
