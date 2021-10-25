@@ -116,21 +116,54 @@
     }
 
     .third_section{
-        margin-bottom: 14vw;
-
+        margin-bottom: 16vw;
 
        .third_section_content{
            .image_holder{
                text-align: center;
+               max-width: 5vw;
+               margin: auto;
+               margin-bottom: 2vw;
+
+               img{
+                    width: 100%;
+               } 
+           }
+
+           .third_section_description{
+                margin-bottom: 9vw;
+                text-align: center;
+                .text();
+                text-transform: uppercase;
+                .font2M();
+
+                &.bottom{
+                    margin-bottom: 5px;
+                }
+           }
+
+           .regular_desc{
+               text-align: center;
            }
 
             .classes_list{
+                position: relative;
 
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 1px;
+                    background-color: #000;
+                    height: 130%;
+                }
                 .classes_list_content{
                     .single_class{
                         display: flex;
                         position: relative;
-
+                        margin-bottom: 5vw;
                         
                         .left{
                             width: 50%;
@@ -163,6 +196,17 @@
                             width: 50%;
                             padding-left: 5vw;
                             box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+
+                            ul{
+                                li{
+                                    list-style-type: disc;
+                                    .text();
+                                    max-width: 26vw;
+                                    margin-bottom: 1vw;
+                                }
+                            }
                         }
                     }
                 }

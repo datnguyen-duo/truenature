@@ -67,7 +67,7 @@ get_header(); ?>
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/classes_shape.png">
                 </div>
-                <p>
+                <p class="third_section_description">
                     Classes in the Viniyoga tradition include:
                 </p>
 
@@ -91,8 +91,52 @@ get_header(); ?>
                                 </ul>
                             </div>
                         </div>
+                        
+                        <div class="single_class">
+                            <div class="left">
+                                <h3>Asana</h3>
+                                <p>
+                                    (Physical Postures)
+                                </p>
+                            </div>
+                            <div class="right">
+                                <ul>
+                                    <li>
+                                        Cultivates balance, strength and flexibility
+                                    </li>
+                                    <li>
+                                        Transforms dysfunctional movement patterns
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single_class">
+                            <div class="left">
+                                <h3>Meditation</h3>
+                                <p>
+                                    (Mastering Attention)
+                                </p>
+                            </div>
+                            <div class="right">
+                                <ul>
+                                    <li>
+                                        Cultivates focus and present moment awareness
+                                    </li>
+                                    <li>
+                                        Surfaces how conditioning influences our thoughts, actions, emotions and moves beyond unconscious patterning
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <p class="third_section_description bottom">
+                    And more
+                </p>
+                <p class="regular_desc">
+                    Yoga philosophy, use of sound, connection to sangha (community) and more
+                </p>
             </div>
         </section>
 
