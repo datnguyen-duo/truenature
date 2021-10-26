@@ -3,29 +3,30 @@
 get_header(); ?>
 
 <div class="template_classes">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/classes/shape.png" class="shape1">
 
     <div class="template_classes_content">
         <div class="hero_content_inner">
             <h1>group classes</h1>
-            <a>
+            <a href="/contact">
                 Contact Us
                 <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
             </a>
         </div>
 
         <section class="first_section">
-            <div class="first_section_content">
+            <div class="first_section_content fadein_wrap">
                 <div class="left">
-                    <div class="left_content fadein_wrap">
+                    <div class="left_content">
                         <h2>
-                            True Nature offers thoughtfully designed functional group classes.
+                            True Nature offers <br> thoughtfully <br>designed functional <br>group classes.
                         </h2>
                     </div>
                 </div>
                 <div class="right">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/white_lines.svg" class="white_lines">
-                    <div class="image_holder fadein_wrap">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/classes.png" alt="Group Classes">
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/classes/classes.png" alt="Group Classes">
                     </div>
                     
                 </div>
@@ -33,7 +34,7 @@ get_header(); ?>
         </section>
 
         <section class="second_section">
-            <div class="second_section_content">
+            <div class="second_section_content fadein_wrap">
                 <div class="tools">
 
                     <div class="tools_wrap">
@@ -63,9 +64,9 @@ get_header(); ?>
         </section>
 
         <section class="third_section">
-            <div class="third_section_content">
+            <div class="third_section_content fadein_wrap">
                 <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/classes_shape.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/classes/classes_shape.png">
                 </div>
                 <p class="third_section_description">
                     Classes in the Viniyoga tradition include:
@@ -140,7 +141,7 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="contact_section">
+        <section class="contact_section fadein_wrap">
             <img src="<?php echo get_template_directory_uri(); ?>/images/contact_circle.svg" alt="separator" class="contact_circle">
             <div class="contact_section_wrap">
                 <div class="contact_section_content">
@@ -171,7 +172,7 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="faq_section">
+        <section class="faq_section fadein_wrap">
             <div class="faq_section_content">
                 <div class="left">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/shape3.svg" class="shape3">

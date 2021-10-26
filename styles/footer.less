@@ -30,6 +30,7 @@ footer{
                 .button_holder{
                     position: relative;
                     cursor: pointer;
+                    display: block;
 
                     .marquee{
                         position: absolute;
@@ -37,6 +38,7 @@ footer{
                         left: 50%;
                         transform: translate(-50%, -50%);
                         width: 9vw;
+                        z-index: 1;
                         height: 9vw;
                         // animation: rotation 10s infinite linear;
                     }
@@ -48,9 +50,13 @@ footer{
                         left: 50%;
                         transform: translate(-50%, -50%);
                         z-index: 1;
+                        z-index: 3;
                     }
 
                     a{
+                        display: block;
+                        position: relative;
+                        z-index: 2;
                         background-color: @color1;
                         display: flex;
                         justify-content: center;

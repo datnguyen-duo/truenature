@@ -3,21 +3,22 @@
 get_header(); ?>
 
 <div class="template_therapy">
-
+    <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/shape.png" alt="" class="shape1">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/shape.png" alt="" class="shape2">
     <div class="template_therapy_content">
         <div class="hero_content_inner">
             <h1>Yoga therapy</h1>
-            <a>
+            <a href="/contact">
                 Contact Us
                 <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
             </a>
         </div>
 
         <section class="first_section">
-            <div class="first_section_content">
+            <div class="first_section_content fadein_wrap">
                 <div class="left">
                     <div class="image_holder fadein_wrap">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/yoga_therapy_image.png" alt="Yoga Therapy">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/yoga_therapy_image.png" alt="Yoga Therapy">
                     </div>
                 </div>
                 <div class="right">
@@ -60,7 +61,7 @@ get_header(); ?>
         </section>
 
         <section class="third_section">
-            <div class="third_section_content">
+            <div class="third_section_content fadein_wrap">
                 <div class="left">
                     <h2>Panca <span>five</span></h2>
                     <h2>Maya <span>Pervading</span></h2>
@@ -71,31 +72,31 @@ get_header(); ?>
                 </div>
                 <div class="right">
                     <div class="image_holder">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/third_section_image.svg">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/third_section_image.svg">
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="fourth_section">
-            <div class="fourth_section_content">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/circle3.svg" class="circle3">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/circle1.svg" class="circle1">
+            <div class="fourth_section_content fadein_wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle3.svg" class="circle3">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle1.svg" class="circle1">
 
                 <h2>//healing <br> through yoga</h2>
                 <p>
                     Works with issues including:
                 </p>
 
-                <img src="<?php echo get_template_directory_uri(); ?>/images/circle5.svg" class="circle5">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/circle4.svg" class="circle4">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/circle2.svg" class="circle2">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle5.svg" class="circle5">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle4.svg" class="circle4">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle2.svg" class="circle2">
             
             </div>
         </section>
 
         <section class="fifth_section">
-            <div class="fifth_section_content">
+            <div class="fifth_section_content fadein_wrap">
                 <h2>//how it works</h2>
                 <p>
                     We believe in quality care. In taking the time to understand before thoughtfully proceeding. Change is inevitable, but we can influence the <br> direction of change. Consistent personal practice is the foundation for transformation. If you're ready to begin, Viniyoga has tools to help.
@@ -140,7 +141,7 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="contact_section">
+        <section class="contact_section fadein_wrap">
             <img src="<?php echo get_template_directory_uri(); ?>/images/contact_circle.svg" alt="separator" class="contact_circle">
             <div class="contact_section_wrap">
                 <div class="contact_section_content">
@@ -149,7 +150,7 @@ get_header(); ?>
                     <div class="separator">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/white_separator.svg" alt="separator">
                     </div>
-                    <a>
+                    <a href="/contact">
                         Contact Us
                         <img src="<?php echo get_template_directory_uri(); ?>/images/white_arrow.svg" alt="arrow">
                     </a>
@@ -158,7 +159,7 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="faq_section">
+        <section class="faq_section fadein_wrap">
             <div class="faq_section_content">
                 <div class="left">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/shape3.svg" class="shape3">

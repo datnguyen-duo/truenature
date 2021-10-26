@@ -5,22 +5,23 @@ get_header(); ?>
 
 
 <div class="template_mentoring">
-
+    <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/shape.png" class="shape1">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/shape.png" class="shape2">
     <div class="template_mentoring_content">
         <div class="hero_content_inner">
             <h1>mentoring</h1>
-            <a>
+            <a href="/contact">
                 Contact Us
                 <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
             </a>
         </div>
 
         <section class="first_section">
-            <div class="first_section_content">
+            <div class="first_section_content fadein_wrap">
                 <div class="left">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/white_lines.svg" class="white_lines">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/white_lines.png" class="white_lines">
                     <div class="image_holder fadein_wrap">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/classes.png" alt="Group Classes">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/mentoring.png" alt="Group Classes">
                     </div>
                 </div>
                 <div class="right">
@@ -31,7 +32,7 @@ get_header(); ?>
                         </h2>
 
                         <p>
-                            For serious practitioners, teachers and therapists in the Viniyoga tradition, guidance on the path through a relationship with a primary teacher or mentor is an important part of the tradition. Mentoring can also include support/tutoring in programs of study for teachers and therapists currently enrolled in professional training programs.
+                            For serious practitioners, teachers and therapists in the Viniyoga tradition, guidance on the path through a relationship with a primary teacher or mentor is an important part of the tradition. <br><br> Mentoring can also include support/tutoring in programs of study for teachers and therapists currently enrolled in professional training programs.
                         </p>
                     </div>
                 </div>
@@ -39,7 +40,7 @@ get_header(); ?>
         </section>
 
         <section class="second_section">
-            <div class="second_section_content">
+            <div class="second_section_content fadein_wrap">
                 <p>
                     Mentoring provides an outside perspective
                 </p>
@@ -48,26 +49,26 @@ get_header(); ?>
                     <div class="list_wrap">
                         <ul>
                             <li>
-                                Guiding choice and adaptation of asana
+                                Guiding choice and <br> adaptation of asana
                             </li>
                             <li>
-                                A sounding board with a yoga philosophy lens
+                                A sounding board with a<br> yoga philosophy lens
                             </li>
                         </ul>
                     </div>
 
                     <div class="image_wrap">
                         <div class="image_holder">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/classes.png" alt="Group Classes">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/circle_image.png" alt="Group Classes">
                         </div>
                     </div>
                     <div class="list_wrap">
                         <ul>
                             <li>
-                                Guiding choice and adaptation of asana
+                                Direction in appropriate <br> choice of meditation practice
                             </li>
                             <li>
-                                A sounding board with a yoga philosophy lens
+                                Connection to resources <br> and support on the path
                             </li>
                         </ul>
                     </div>
@@ -83,7 +84,7 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="contact_section">
+        <section class="contact_section fadein_wrap">
             <img src="<?php echo get_template_directory_uri(); ?>/images/contact_circle.svg" alt="separator" class="contact_circle">
             <div class="contact_section_wrap">
                 <div class="contact_section_content">
@@ -92,7 +93,7 @@ get_header(); ?>
                     <div class="separator">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/white_separator.svg" alt="separator">
                     </div>
-                    <a>
+                    <a href="/contact">
                         Contact Us
                         <img src="<?php echo get_template_directory_uri(); ?>/images/white_arrow.svg" alt="arrow">
                     </a>
@@ -102,7 +103,7 @@ get_header(); ?>
         </section>
 
         <section class="fourth_section">
-            <div class="fourth_section_content">
+            <div class="fourth_section_content fadein_wrap">
                 <h2>//how it works</h2>
                 <!-- <p>
                     After you’ve had your consult call and we’ve decided to work together, what to expect:
@@ -140,7 +141,7 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="faq_section">
+        <section class="faq_section fadein_wrap">
             <div class="faq_section_content">
                 <div class="left">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/shape3.svg" class="shape3">

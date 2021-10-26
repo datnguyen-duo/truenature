@@ -24,7 +24,7 @@
                 <div class="button_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/round_text.svg" alt="arrow" class="marquee">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/white_arrow.svg" alt="arrow" class="arrow">
-                    <a href="">
+                    <a href="/contact">
                     </a>
                 </div>
             </div>
@@ -50,22 +50,22 @@
             <div class="right">
                 <ul>
                     <li>
-                        <a href="">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="">yoga therapy</a>
+                        <a href="/yoga-therapy">yoga therapy</a>
                     </li>
                     <li>
-                        <a href="">group classes</a>
+                        <a href="/group-classes">group classes</a>
                     </li>
                     <li>
-                        <a href="">mentoring</a>
+                        <a href="/mentoring">mentoring</a>
                     </li>
                     <li>
-                        <a href="">studio</a>
+                        <a href="/about">studio</a>
                     </li>
                     <li>
-                        <a href="">contact</a>
+                        <a href="/contact">contact us</a>
                     </li>
                 </ul>
             </div>

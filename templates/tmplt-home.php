@@ -26,7 +26,7 @@ get_header(); ?>
                     </p>
 
                     <div class="button_holder">
-                        <a href="">
+                        <a href="/yoga-therapy">
                             Learn More
                             <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
                         </a>
@@ -39,7 +39,7 @@ get_header(); ?>
                     </p>
 
                     <div class="button_holder">
-                        <a href="">
+                        <a href="/group-classes">
                             Learn More
                             <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
                         </a>
@@ -52,7 +52,7 @@ get_header(); ?>
                     </p>
 
                     <div class="button_holder">
-                        <a href="">
+                        <a href="/mentoring">
                             Learn More
                             <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
                         </a>

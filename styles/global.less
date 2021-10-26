@@ -203,6 +203,7 @@ body {
     color: @color2;
     .font1R();
     text-transform: uppercase;
+    // line-height: 1.2em;
 }
 
 .medium_headline{
@@ -210,6 +211,7 @@ body {
     font-size: 4vw;
     .font1R();
     text-transform: uppercase;
+    // line-height: 1.2em;
 }
 
 .small_headline{
@@ -217,6 +219,7 @@ body {
     font-size: 1.8vw;
     .font1R();
     text-transform: uppercase;
+    // line-height: 1.2em;
 }
 
 .cropped_img {
@@ -299,6 +302,7 @@ body {
 .contact_section{
     position: relative;
     margin-bottom: 14vw;
+    .slide_up();
 
     .contact_circle{
         position: absolute;
@@ -366,6 +370,14 @@ body {
                 img{
                     margin-left: 1vw;
                     position: relative;
+                    right: 0px;
+                    .transition();
+                }
+                
+                &:hover{
+                    img{
+                        right: -5px;
+                    }
                 }
             }
 
@@ -384,6 +396,7 @@ body {
 }
 
 .faq_section{
+    .slide_up();
     .faq_section_content{
         display: flex;
 
@@ -487,3 +500,4 @@ body {
 @import "tmpl-classes";
 @import "tmpl-mentoring";
 @import "tmpl-about";
+@import "tmpl-contact";

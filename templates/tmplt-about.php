@@ -5,62 +5,80 @@ get_header(); ?>
 
 
 <div class="template_about">
-
+    <img src="<?php echo get_template_directory_uri(); ?>/images/about/shape1.svg" class="shape1">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/about/shape2.svg" class="shape2">
     <div class="template_about_content">
+        
         <div class="hero_content_inner">
             <h1>welcome</h1>
             <p>
-                What is viniyoga // About the lineage // About the studio // About Briana
+                
+                <a href="#about">What is viniyoga</a> <span>//</span> <a href="#lineage">About the lineage</a> <span>//</span> <a href="#studio">About the studio</a> <span>//</span> <a href="#about_briana">About Briana</a>
             </p>
         </div>
 
-        <section class="first_section">
-            <div class="first_section_content">
-                <div class="headline_holder fadein_wrap">
+        <section class="first_section" id="about">
+            <div class="first_section_content fadein_wrap">
+                <div class="headline_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/theryapy_flower.svg">
                     <h3>what is viniyoga?</h3>
                 </div>
 
-                <div class="description_section fadein_wrap">
+                <div class="description_section">
                     <p>
-                        Viniyoga is a term given by T. Krisnamacharya to his son, TKV Desikachar identify an orientation to practice that is adapted to the unique interests and needs of the individual, and progresses toward a clear goal, over time. A Sanskrit word, Viniyoga translates to “appropriate application”. A wise teacher in the tradition once shared, Yoga can be a like a life raft, getting back to level in a time of trouble, in can be a catapault, launching you toward transformation and your most authentic self, once the base is stable. Viniyoga has tools for both.
+                        Viniyoga is a term given by T. Krisnamacharya to his son, TKV Desikachar identify an orientation to practice that is adapted to the <br> unique interests and needs of the individual, and progresses toward a clear goal, over time. <br><br>A Sanskrit word, Viniyoga translates to “appropriate application”. A wise teacher in the tradition once shared, Yoga can be a like a <br> life raft, getting back to level in a time of trouble, in can be a catapault, launching you toward transformation and your most <br> authentic self, once the base is stable. Viniyoga has tools for both.
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="second_section">
-            <div class="second_section_content">
+            <div class="second_section_content fadein_wrap">
                 <div class="image_holder_wrap">
                     
                     <div class="image_holder">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about_white_lines.png" class="about_white_lines">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about.png" class="background">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/about_white_lines.png" class="about_white_lines">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/about.png" class="background">
                     </div>
                 </div>
-
-                <div class="second_section_description">
-                    <h2>//about <br> the lineage</h2>
-                    <h3>
-                        Viniyoga is teaching passed down through the lineage of T. Krisnamacharya and his son, TKV Desikachar.
-                    </h3>
-                    <p>
-                        Viniyoga is teaching passed down through the lineage of T. Krisnamacharya and his son, TKV Desikachar. Mr. Desikachar trained my teachers, including my personal mentor, Chase Bossart, Director of Yoga Well Institute. Other notable students of T. Krisnamacharya include Pattabhi Jois, BKS Iyengar and Indra Devi.
-                    </p>
+                <div class="second_section_description_wrap">
+                    <div class="images_holder">
+                        <div class="image_holder">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/about/about1.png">
+                        </div>
+                        <div class="image_holder">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/about/about2.png">
+                        </div>
+                        <div class="info_holder">
+                            <p>
+                            You can learn <br> more about <br> T. Krisnamacharya, <br> his work and this <br> lineage <a href="">here.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="second_section_description" id="lineage">
+                        <h2>//about <br> the lineage</h2>
+                        <h3>
+                            Viniyoga is teaching passed down through the lineage of T. Krisnamacharya and his son, TKV Desikachar.
+                        </h3>
+                        <p> 
+                            Viniyoga is teaching passed down through the lineage of T. Krisnamacharya and his son, TKV Desikachar. Mr. Desikachar trained my teachers, including my personal mentor, Chase Bossart, Director of Yoga Well Institute. <br><br> Other notable students of T. Krisnamacharya include Pattabhi Jois, BKS Iyengar and Indra Devi.
+                        </p>
+                    </div>
                 </div>
+                
             </div>
             
         </section>
 
-        <section class="third_section">
-            <div class="third_section_content">
+        <section class="third_section" id="studio">
+            <div class="third_section_content fadein_wrap">
                 <div class="left">
-                    <div class="image_holder fadein_wrap">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about3.png" alt="Yoga Therapy">
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/about3.png" alt="Yoga Therapy">
                     </div>
                 </div>
                 <div class="right">
-                    <div class="right_content fadein_wrap">
+                    <div class="right_content">
                         <h2>
                             //about <br> the studio
                         </h2>
@@ -84,12 +102,12 @@ get_header(); ?>
         </section>
 
         <section class="fourth_section">
-            <div class="fourth_section_content">
-                <div class="headline_holder fadein_wrap">
+            <div class="fourth_section_content fadein_wrap">
+                <div class="headline_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/home_shape.svg">
                 </div>
 
-                <div class="description_section fadein_wrap">
+                <div class="description_section">
                     <p>
                         We honor the lineage and culture from which these practices developed and strive to hold an inclusive space, true to the teachings, where all who make a genuine commitment to practice are welcome.
                     </p>
@@ -97,11 +115,11 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="fifth_section">
-            <div class="fifth_section_content">
+        <section class="fifth_section" id="about_briana">
+            <div class="fifth_section_content fadein_wrap">
                 <div class="left">
                     <div class="image_holder">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about4.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/about4.png">
                     </div>
                 </div>
 
@@ -119,8 +137,6 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-
-
     </div>
 </div>
 

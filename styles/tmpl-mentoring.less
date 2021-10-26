@@ -1,10 +1,27 @@
 .template_mentoring{
+    position: relative;
+    overflow: hidden;
+
+    .shape1{
+        position: absolute;
+        top: 10vw;
+        left: -22%;
+        width: 35vw;
+    }
+
+    .shape2{
+        position: absolute;
+        top: 10vw;
+        right: -22%;
+        width: 35vw;
+    }
+
     .hero_content_inner{
         position: relative;
         z-index: 2;
         text-align: center;
         box-sizing: border-box;
-        padding: 14.5vw 5vw 16vw 5vw;
+        padding: 20vw 5vw 20vw 5vw;
         max-width: 80vw;
         margin: auto;
         opacity: 1;
@@ -28,6 +45,14 @@
             img{
                 margin-left: 1vw;
                 position: relative;
+                right: 0px;
+                .transition();
+            }
+
+            &:hover{
+                img{
+                    right: -5px;
+                }
             }
         }
     }
@@ -38,6 +63,7 @@
        .first_section_content{
            display: flex;
            flex-wrap: wrap;
+           .slide_up();
 
             .left{
                 width: 45%;
@@ -48,8 +74,7 @@
                     left: 0;
                     top: 0;
                     z-index: 2;
-                    width: 20vw;
-                    transform: rotate(270deg);
+                    width: 28vw;
                 }
 
                 .image_holder{
@@ -99,6 +124,7 @@
         margin-bottom: 14vw;
 
         .second_section_content{
+            .slide_up();
             p{
                 .text();
                 text-transform: uppercase;
@@ -140,6 +166,7 @@
                     box-sizing: border-box;
 
                     ul{
+                        // max-width: 15vw;
                         li{
                             .text();
                             font-size: 1vw;
@@ -156,6 +183,10 @@
                     &:first-child{
                         padding-right: 3vw;
                         text-align: right;
+
+                        ul{
+                            // margin-left: auto;
+                        }
                     }
 
                     &:last-child{
@@ -191,6 +222,7 @@
         box-sizing: border-box;
 
         .fourth_section_content{
+            .slide_up();
             h2{
                 .big_headline();
                 text-align: center;

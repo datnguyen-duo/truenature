@@ -1,10 +1,28 @@
 .template_about {
+  overflow: hidden;
+
+  .shape1{
+    position: absolute;
+    top: -8.6%;
+    right: 10vw;
+    z-index: 4;
+    width: 46vw;
+  }
+
+  .shape2{
+    position: absolute;
+    top: 8.6%;
+    left: -31%;
+    z-index: 4;
+    width: 46vw;
+  }
+
   .hero_content_inner {
     position: relative;
     z-index: 2;
     text-align: center;
     box-sizing: border-box;
-    padding: 14.5vw 5vw 16vw 5vw;
+    padding: 20vw 5vw 20vw 5vw;
     max-width: 80vw;
     margin: auto;
     opacity: 1;
@@ -19,7 +37,18 @@
       .text();
       text-align: center;
       .font2M();
+      font-size: 0.8vw;
       text-transform: uppercase;
+
+      a, span{
+        display: inline-block
+      }
+
+      span{
+        .text();
+        .font2M();
+        margin: 0 0.6vw;
+      }
     }
 
     a {
@@ -32,9 +61,17 @@
       display: flex;
       justify-content: center;
 
-      img {
+      img{
         margin-left: 1vw;
         position: relative;
+        right: 0px;
+        .transition();
+      }
+
+      &:hover{
+          img{
+              right: -5px;
+          }
       }
     }
   }
@@ -43,9 +80,10 @@
     margin-bottom: 14vw;
 
     .first_section_content {
+      .slide_up();
+
       .headline_holder {
         text-align: center;
-        .slide_up();
 
         img {
           width: 4.5vw;
@@ -54,7 +92,7 @@
 
         h3 {
           .medium_headline();
-          margin-bottom: 4vw;
+          margin-bottom: 1vw;
           text-align: center;
         }
       }
@@ -64,9 +102,8 @@
         justify-content: space-between;
         padding: 0 20px;
         box-sizing: border-box;
-        max-width: 50vw;
+        // max-width: 50vw;
         margin: auto;
-        .slide_up();
 
         p {
           .text();
@@ -81,6 +118,7 @@
     margin-bottom: 14vw;
 
     .second_section_content {
+      .slide_up();
       .image_holder_wrap {
         box-sizing: border-box;
         padding-right: 11vw;
@@ -104,27 +142,96 @@
           }
         }
       }
-
-      .second_section_description {
-        padding-left: 11vw;
-        max-width: 50vw;
+      .second_section_description_wrap{
         position: relative;
-        top: -2.5vw;
 
-        h2 {
-          .big_headline();
-          margin-bottom: 3vw;
+        .images_holder{
+          position: absolute;
+          right: 17vw;
+          top: -3vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .image_holder{
+            position: relative;
+            overflow: hidden;
+            width: 7vw;
+            height: 7vw;
+            border-radius: 100%;
+            margin-bottom: 1vw;
+
+            img{
+              .cropped_img();
+            }
+          }
+
+          .info_holder{
+            background-color: #000;
+            border-radius: 100%;
+            width: 10vw;
+            height: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            p{
+              .text();
+              font-size: 0.85vw;
+              color: #fff;
+
+              a{
+                color: #fff;
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                .transition();
+
+                &:after{
+                  content: '';
+                  height: 1px;
+                  width: 100%;
+                  background-color: #fff;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  .transition();
+                }
+
+                &:hover{
+                  &:after{
+                    width: 0%;
+                  }
+                }
+              }
+            }
+          }
+          
         }
 
-        h3 {
-          .text();
-          text-transform: uppercase;
-          .font2M();
-          margin-bottom: 1vw;
-        }
-
-        p {
-          .text();
+        .second_section_description {
+          padding-left: 11vw;
+          max-width: 50vw;
+          position: relative;
+          top: -3vw;
+  
+          h2 {
+            .big_headline();
+            margin-bottom: 3vw;
+          }
+  
+          h3 {
+            .text();
+            text-transform: uppercase;
+            .font2M();
+            letter-spacing: 1.6px;
+            margin-bottom: 1vw;
+          }
+  
+          p {
+            .text();
+          }
         }
       }
     }
@@ -136,6 +243,7 @@
     .third_section_content {
       display: flex;
       flex-wrap: wrap;
+      .slide_up();
 
       .left {
         width: 45%;
@@ -167,11 +275,12 @@
 
         ul {
           margin-top: 5vw;
-          max-width: 25vw;
+          max-width: 30vw;
           padding-left: 11vw;
 
           li {
             .text();
+            .font1R();
             font-size: 1vw;
             border-top: 1px solid @color1;
             padding-top: 0.2vw;
@@ -191,6 +300,7 @@
 
       .fourth_section_content{
         text-align:center;
+        .slide_up();
 
         img{    
             width: 4.5vw;
@@ -199,7 +309,7 @@
             
         .description_section{
             margin: auto;
-            max-width: 50vw;
+            max-width: 57vw;
             text-align:center;
             p{
                 .small_headline();
@@ -215,6 +325,7 @@
             display: flex;
             padding: 0 11vw;
             box-sizing: border-box;
+            .slide_up();
 
             .left{
                 width: 25%;
@@ -225,7 +336,7 @@
                     overflow: hidden;
 
                     img{
-                        .cropped_img();
+                      .cropped_img();
                     }
                 }
             }
@@ -236,6 +347,7 @@
                     padding-top: 2vw;
                     box-sizing: border-box;
                 }
+
                 h2{
                     .big_headline();
                     font-size: 5vw;
@@ -248,7 +360,7 @@
                     .text();
                     text-transform: uppercase;
                     .font2M();
-                    margin-bottom: 1vw;
+                    margin-bottom: 0.7vw;
                     padding-left: 5vw;
                 }
                 
