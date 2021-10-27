@@ -1,5 +1,17 @@
 <?php
 /* Template Name: Home */
+
+$main_headline = get_field('main_headline');
+$main_subheadline = get_field('main_subheadline');
+$section_1_list = get_field('section_1_list');
+$section_2_headline = get_field('section_2_headline');
+$section_2_description = get_field('section_2_description');
+$section_2_image = get_field('section_2_image');
+$section_3_headline = get_field('section_3_headline');
+$section_3_list = get_field('section_3_list');
+$section_4_headline = get_field('section_4_headline');
+$testimonials_slider = get_field('testimonials_slider');
+
 get_header(); ?>
 
 <div class="template_home_holder">
@@ -11,141 +23,122 @@ get_header(); ?>
         <img src="<?php echo get_template_directory_uri(); ?>/images/glow.svg" class="glow2">
 
         <div class="hero_content">
-            <h1>True Nature</h1>
-            <p>
-                Yoga therapy, small group classes & mentoring in the Viniyoga tradition
-            </p>
+            <?php if($main_headline): ?>
+                <h1><?php echo $main_headline; ?></h1>
+            <?php endif; ?>
+
+            <?php if($main_subheadline): ?>
+                <p>
+                    <?php echo $main_subheadline; ?>
+                </p>
+            <?php endif; ?>
         </div>
+        
+        <?php if($section_1_list): ?>
+            <section class="first_section">
+                <div class="first_section_content">
+                    <?php foreach( $section_1_list as $singleItem ): ?>
+                        <div class="single_box fadein_wrap">
+                            <?php if($singleItem['single_item_headline']): ?>
+                                <h2><?php echo $singleItem['single_item_headline']; ?></h2>
+                            <?php endif; ?>
 
-        <section class="first_section">
-            <div class="first_section_content">
-                <div class="single_box fadein_wrap">
-                    <h2>Yoga therapy</h2>
-                    <p>
-                        Private therapy, teaching passed down through the lineage of T. Krisnamacharya and his son, T.K.V. Desikachar, widely known as Viniyoga.
-                    </p>
-
-                    <div class="button_holder">
-                        <a href="/yoga-therapy">
-                            Learn More
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
-                        </a>
-                    </div>
+                            <?php if($singleItem['single_item_description']): ?>
+                                <p>
+                                    <?php echo $singleItem['single_item_description']; ?>
+                                </p>
+                            <?php endif; ?>
+                            
+                            <?php if($singleItem['single_item_link']): ?>
+                                <div class="button_holder">
+                                    <a href="<?php echo $singleItem['single_item_link']['url']; ?>" target="<?php echo $singleItem['single_item_link']['target']; ?>">
+                                        <?php echo $singleItem['single_item_link']['title']; ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
+                                    </a>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="single_box fadein_wrap">
-                    <h2>Group classes</h2>
-                    <p>
-                        True Nature offers goal-focused, small group classes, that run as monthly series. Lesson plans build skills over time and are tailored to the goals and needs of the group.
-                    </p>
-
-                    <div class="button_holder">
-                        <a href="/group-classes">
-                            Learn More
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-                <div class="single_box fadein_wrap">
-                    <h2>mentoring</h2>
-                    <p>
-                        Guidance on the path for serious practitioners, students, teachers, and therapists in the Viniyoga tradition. Includes support in programs of study for teachers and therapists. Support for emerging and established teachers and therapists.
-                    </p>
-
-                    <div class="button_holder">
-                        <a href="/mentoring">
-                            Learn More
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
 
         <section class="second_section">
             <div class="second_section_content">
                 <div class="left">
                     <div class="left_content fadein_wrap">
-                        <h2>
-                            //The Viniyoga Philosophy
-                        </h2>
-                        <p>
-                            The essential meaning of the ancient Sanskrit word Viniyoga is application to suit the individual, a progression.
-                        </p>
+                        <?php if($section_2_headline): ?>
+                            <h2>
+                                <?php echo $section_2_headline; ?>
+                            </h2>
+                        <?php endif; ?>
+                        <?php if($section_2_description): ?>
+                            <p>
+                                <?php echo $section_2_description; ?>
+                            </p>
+                        <?php endif; ?>
                     </div>
                     
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/white_lines.svg" class="white_lines">
-                    <div class="image_holder fadein_wrap">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home.png" alt="The Viniyoga Philosophy">
-                    </div>
+                    <?php if($section_2_image): ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/white_lines.svg" class="white_lines">
+                        <div class="image_holder fadein_wrap">
+                            <img src="<?php echo $section_2_image['url']; ?>" alt="<?php echo $section_2_image['alt']; ?>">
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
 
         <section class="third_section">
             <div class="third_section_content">
-                <div class="headline_holder fadein_wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/home_shape.svg">
-                    <h3>The hallmarks of the Viniyoga approach</h3>
-                </div>
-
-                <div class="three_box_section fadein_wrap">
-                    <div class="single_box">
-                        <p>
-                            A clear, organized approach. Practices develop over time for step-by-step, sustainable progress.
-                        </p>
+                <?php if($section_3_headline): ?>
+                    <div class="headline_holder fadein_wrap">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/home_shape.svg">
+                        <h3><?php echo $section_3_headline; ?></h3>
                     </div>
-                    <div class="single_box">
-                        <p>
-                            Meets you where you are. Injured or at the peak of health- Viniyoga has a practice adapted to work for you.
-                        </p>
+                <?php endif; ?>
+                
+                <?php if($section_3_list): ?>
+                    <div class="three_box_section fadein_wrap">
+                        <?php foreach( $section_3_list as $singleItem ): ?>
+                            <div class="single_box">
+                                <p>
+                                    <?php echo $singleItem['single_list_item']; ?>
+                                </p>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="single_box">
-                        <p>
-                            Practices are chosen for function over form, to maintain or regain individual balance.
-                        </p>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
         </section>
 
         <div class="fourth_section">
             <img src="<?php echo get_template_directory_uri(); ?>/images/shape3.svg" class="shape3">
             <div class="fourth_section_content fadein_wrap">
-                <h2>//we asked our clients</h2>
+            
+                <?php if($section_4_headline): ?>
+                    <h2><?php echo $section_4_headline; ?></h2>
+                <?php endif; ?>
+                <?php if($testimonials_slider): ?>
+                    <div class="testimonials">
+                        <?php foreach( $testimonials_slider as $singleItem ): ?>
+                            <div class="single_testimonial">
+                                <p class="question">
+                                    <?php echo $singleItem['single_testimonial_question']; ?>
+                                </p>
 
-                <div class="testimonials">
-                    <div class="single_testimonial">
-                        <p class="question">
-                            HOW HAS VINIYOGA BENEFITTED YOU?
-                        </p>
-
-                        <p class="answer">
-                            I am calmer, I worry less about things that used to bother me, and when I practice regularly I feel a a stability and strength at my (physical) center.
-                        </p>
+                                <p class="answer">
+                                    <?php echo $singleItem['single_testimonial_description']; ?>
+                                    
+                                </p>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="single_testimonial">
-                        <p class="question">
-                        HOW HAS VINIYOGA BENEFITTED YOU SECOND SLIDE?
-                        </p>
-
-                        <p class="answer">
-                            Second I am calmer, I worry less about things that used to bother me, and when I practice regularly I feel a a stability and strength at my (physical) center.
-                        </p>
-                    </div>
-                    <div class="single_testimonial">
-                        <p class="question">
-                        HOW HAS VINIYOGA BENEFITTED YOU THIRD SLIDE?
-                        </p>
-
-                        <p class="answer">
-                            Third I am calmer, I worry less about things that used to bother me, and when I practice regularly I feel a a stability and strength at my (physical) center.
-                        </p>
-                    </div>
-                </div>
-                <span class="pagingInfo">1/3</span>
-                <div class="new_arrows"></div>
+                    <span class="pagingInfo">1/3</span>
+                    <div class="new_arrows"></div>
+                <?php endif; ?>
             </div>
         </div>
         
