@@ -277,6 +277,10 @@ body {
             margin: auto;
             // animation: menuRotation 5s infinite linear;
 
+            @media @1100{
+                width: 130px;
+            }
+
             img{
                 width: 100%;
             }
@@ -288,6 +292,18 @@ body {
             overflow: hidden;
             min-height: 4vw;
             min-width: 50vw;
+
+            @media @1100{
+                margin-top: 30px;
+                min-height: 40px;
+            }
+
+            @media @1100{
+                width: 100%;
+                min-width: 100vw;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
 
             .single_description{
                 position: absolute;
@@ -306,6 +322,10 @@ body {
                     font-size: 1.1vw;
                     margin-bottom: 1vw;
 
+                    @media @1100{
+                        font-size: 14px;
+                    }
+
                     span{
                         color: #fff;
                         .font2B();
@@ -317,6 +337,10 @@ body {
                         text-transform: uppercase;
                         color: #fff;
                         font-size: 1.1vw;
+
+                        @media @1100{
+                            font-size: 14px;
+                        }
                     }
                 }
             }
