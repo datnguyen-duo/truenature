@@ -7,21 +7,41 @@
         width: 50vw;
         top: 20vw;
         left: -30%;
+
+        @media @1100{
+            top: 30vw;
+        }
+
+        @media @750{
+            top: 6.4%;
+        }
     }
     .hero_content_inner{
         position: relative;
         z-index: 2;
         text-align: center;
         box-sizing: border-box;
-        padding: 14.5vw 5vw 16vw 5vw;
+        padding: 20vw 5vw 20vw 5vw;
         max-width: 80vw;
         margin: auto;
         opacity: 1;
         top: 0px;
+
+        @media @1100{
+            max-width: 100vw;
+        }
+
+        @media @750{
+            padding: 150px 20px 150px 20px;
+        }
     
         h1{
             .main_headline_small();
             margin-bottom: 4vw;
+
+            @media @750{
+                margin-bottom: 30px;
+            }
         }
     
         a{
@@ -34,11 +54,20 @@
             display: flex;
             justify-content: center;
 
+            @media @750{
+                max-width: 100%;
+            }
+
             img{
                 margin-left: 1vw;
                 position: relative;
                 right: 0px;
                 .transition();
+
+                @media @750{
+                    width: 40px;
+                    margin-left: 10px;
+                }
             }
 
             &:hover{
@@ -50,7 +79,11 @@
     }
 
     .first_section{
-        margin-bottom: 10vw;
+        margin-bottom: 14vw;
+
+        @media @750{
+            margin-bottom: 50px;
+        }
 
        .first_section_content{
            display: flex;
@@ -63,9 +96,18 @@
                justify-content: flex-end;
                flex-direction: column;
 
+               @media @750{
+                    width: 100%;
+                }
+
                .left_content{
                     padding-bottom: 9vw;
                     box-sizing: border-box;
+
+                    @media @750{
+                        margin-bottom: 30px;
+                        padding: 0 20px;
+                    }
 
                     h2{
                         // max-width: 40vw;
@@ -75,6 +117,11 @@
                         text-align: right;
                         font-size: 3vw;
                         z-index: 2;
+
+                        @media @750{
+                            right: auto;
+                            text-align: left;
+                        }
                     }
                 }
                 
@@ -84,12 +131,20 @@
                 width: 45%;
                 position: relative;
 
+                @media @750{
+                    width: 100%;
+                }
+
                 .white_lines{
                     position: absolute;
                     right: 0;
                     top: 0;
                     z-index: 2;
                     width: 20vw;
+
+                    @media @750{
+                        width: 240px;
+                    }
                 }
 
                 .image_holder{
@@ -108,10 +163,22 @@
     .second_section{
         margin-bottom: 10vw;
 
+        @media @750{
+            margin-bottom: 100px;
+        }
+
         .second_section_content{
             padding: 0 11vw;
             box-sizing: border-box;
             .slide_up();
+
+            @media @1100{
+                padding: 0 50px;
+            }
+
+            @media @750{
+                padding: 0px 20px;
+            }
 
             .tools{
                 .tools_wrap{
@@ -122,6 +189,12 @@
                         width: 25%;
                         padding-right: 3vw;
                         box-sizing: border-box;
+
+                        @media @750{
+                            width: 100%;
+                            padding: 0px;
+                            margin-bottom: 30px;
+                        }
 
                         p{
                             .text();
@@ -140,6 +213,10 @@
     .third_section{
         margin-bottom: 16vw;
 
+        @media @750{
+            margin-bottom: 100px;
+        }
+
        .third_section_content{
             .slide_up();
 
@@ -148,6 +225,11 @@
                max-width: 5vw;
                margin: auto;
                margin-bottom: 2vw;
+
+               @media @750{
+                    max-width: 40px;
+                    margin-bottom: 20px;
+                }
 
                img{
                     width: 100%;
@@ -164,10 +246,18 @@
                 &.bottom{
                     margin-bottom: 5px;
                 }
+
+                @media @750{
+                    padding: 0 20px;
+                }
            }
 
            .regular_desc{
                text-align: center;
+
+               @media @750{
+                    padding: 0 20px;
+                }
            }
 
             .classes_list{
@@ -182,21 +272,49 @@
                     width: 1px;
                     background-color: #000;
                     height: 130%;
+
+                    @media @1100{
+                        height: 110%;
+                    }
+
+                    @media @750{
+                        display: none;
+                    }
                 }
                 .classes_list_content{
                     .single_class{
                         display: flex;
                         position: relative;
                         margin-bottom: 5vw;
+
+                        @media @750{
+                            flex-wrap: wrap;
+                            margin-bottom: 40px;
+                            padding: 0 20px;
+                        }
                         
                         .left{
                             width: 50%;
                             padding-right: 5vw;
                             box-sizing: border-box;
 
+                            @media @1020{
+                                padding-right: 50px;
+                            }
+
+                            @media @750{
+                                width: 100%;
+                                padding: 0px;
+                            }
+
                             h3{
                                 .medium_headline();
                                 text-align: right;
+
+                                @media @750{
+                                    text-align: left;
+                                    margin-bottom: 5px;
+                                }
 
                                 &:after{
                                     content: '';
@@ -207,6 +325,10 @@
                                     top: 30%;
                                     transform: translate(-50%, -50%);
                                     background-color: @color1;
+
+                                    @media @750{
+                                        display: none;
+                                    }
                                 }
                             }
                             p{
@@ -214,6 +336,10 @@
                                 .font2M();
                                 text-transform: uppercase;
                                 text-align: right;
+
+                                @media @750{
+                                    text-align: left;
+                                }
                             }
                         }
 
@@ -224,12 +350,31 @@
                             display: flex;
                             align-items: center;
 
+                            @media @1020{
+                                padding-left: 50px;
+                            }
+
+                            @media @750{
+                                width: 100%;
+                                padding: 0px;
+                                margin-top: 20px;
+                            }
+
                             ul{
+                                @media @750{
+                                    padding-left: 20px;
+                                    box-sizing: border-box;
+                                }
                                 li{
                                     list-style-type: disc;
                                     .text();
                                     max-width: 26vw;
                                     margin-bottom: 1vw;
+
+                                    @media @750{
+                                        margin-bottom: 20px;
+                                        max-width: 100%;
+                                    }
                                 }
                             }
                         }

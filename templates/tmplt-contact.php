@@ -263,7 +263,7 @@ get_header(); ?>
         zoom: 17,
         center: uluru,
         styles: map_style,
-        disableDefaultUI: true,
+        
         });
         // The marker, positioned at Uluru
         const marker = new google.maps.Marker({

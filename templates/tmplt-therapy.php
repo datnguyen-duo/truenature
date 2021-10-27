@@ -91,6 +91,30 @@ get_header(); ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle5.svg" class="circle5">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle4.svg" class="circle4">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle2.svg" class="circle2">
+
+                <ul class="mobile_list">
+                    <li>
+                        Insomnia
+                    </li>
+                    <li>
+                        Depression & Anxiety
+                    </li>
+                    <li>
+                        Grief
+                    </li>
+                    <li>
+                        Stress
+                    </li>
+                    <li>
+                        Anger
+                    </li>
+                    <li>
+                        Chronic Pain
+                    </li>
+                    <li>
+                        PTSD
+                    </li>
+                </ul>
             
             </div>
         </section>

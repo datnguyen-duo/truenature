@@ -42,6 +42,16 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="second_section_description_wrap">
+                    
+                    <div class="second_section_description" id="lineage">
+                        <h2>//about <br> the lineage</h2>
+                        <h3>
+                            Viniyoga is teaching passed down through the lineage of T. Krisnamacharya and his son, TKV Desikachar.
+                        </h3>
+                        <p> 
+                            Viniyoga is teaching passed down through the lineage of T. Krisnamacharya and his son, TKV Desikachar. Mr. Desikachar trained my teachers, including my personal mentor, Chase Bossart, Director of Yoga Well Institute. <br><br> Other notable students of T. Krisnamacharya include Pattabhi Jois, BKS Iyengar and Indra Devi.
+                        </p>
+                    </div>
                     <div class="images_holder">
                         <div class="image_holder">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/about/about1.png">
@@ -54,15 +64,6 @@ get_header(); ?>
                             You can learn <br> more about <br> T. Krisnamacharya, <br> his work and this <br> lineage <a href="">here.</a>
                             </p>
                         </div>
-                    </div>
-                    <div class="second_section_description" id="lineage">
-                        <h2>//about <br> the lineage</h2>
-                        <h3>
-                            Viniyoga is teaching passed down through the lineage of T. Krisnamacharya and his son, TKV Desikachar.
-                        </h3>
-                        <p> 
-                            Viniyoga is teaching passed down through the lineage of T. Krisnamacharya and his son, TKV Desikachar. Mr. Desikachar trained my teachers, including my personal mentor, Chase Bossart, Director of Yoga Well Institute. <br><br> Other notable students of T. Krisnamacharya include Pattabhi Jois, BKS Iyengar and Indra Devi.
-                        </p>
                     </div>
                 </div>
                 

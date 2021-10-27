@@ -177,8 +177,8 @@ body {
     .font2R();
     line-height: 1.6em;
 
-    @media @1500{
-        // font-size: 16px;
+    @media @1100{
+        font-size: 14px;
     }
 }
 
@@ -196,6 +196,11 @@ body {
     .font1R();
     text-transform: uppercase;
     letter-spacing: 11.5px;
+
+    @media @750{
+        font-size: 40px;
+        letter-spacing: 5.5px;
+    }
 }
 
 .big_headline{
@@ -204,6 +209,10 @@ body {
     .font1R();
     text-transform: uppercase;
     // line-height: 1.2em;
+
+    @media @750{
+        font-size: 35px;
+    }
 }
 
 .medium_headline{
@@ -212,6 +221,14 @@ body {
     .font1R();
     text-transform: uppercase;
     // line-height: 1.2em;
+
+    @media @1100{
+        font-size: 50px;
+    }
+
+    @media @1020{
+        font-size: 35px;
+    }
 }
 
 .small_headline{
@@ -220,6 +237,14 @@ body {
     .font1R();
     text-transform: uppercase;
     // line-height: 1.2em;
+
+    @media @1100{
+        font-size: 20px;
+    }
+
+    @media @1020{
+        font-size: 18px;
+    }
 }
 
 .cropped_img {
@@ -304,6 +329,10 @@ body {
     margin-bottom: 14vw;
     .slide_up();
 
+    @media @750{
+        margin-bottom: 100px;
+    }
+
     .contact_circle{
         position: absolute;
         left: 50.5%;
@@ -311,7 +340,12 @@ body {
         top: 46%;
         transform: translate(-50%, -50%);
         z-index: 0;
+
+        @media @750{
+            width: 92vw;
+        }
     }
+
     .contact_section_wrap{
         width: 50vw;
         height: 50vw;
@@ -322,17 +356,58 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: @color1;;
+        background-color: @color1;
+
+        @media @750{
+            width: 80vw;
+            height: 80vw;
+        }
 
         .contact_section_content{
             text-align: center;
+
             h2{
                 .small_headline();
                 color: #fff;
             }
 
+            p, input, h2{
+                @media @750{
+                    font-size: 14px;
+                }
+            }
+
+            h2{
+                line-height: 1.2em;
+            }
+
+            &.with_form{
+                .separator{
+    
+                    @media @750{
+                        height: 30px;
+                        display: none;
+                        img{
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
             .separator{
                 margin: 3vw 0;
+
+                @media @750{
+                    margin: 20px 0;
+                }
+            }
+
+            .form_holder{
+                @media @750{
+                    max-width: 100%;
+                    margin: auto;
+                    margin-bottom: 20px;
+                }
             }
 
             input{
@@ -367,13 +442,22 @@ body {
                 display: flex;
                 justify-content: center;
 
+                @media @750{
+                    max-width: 100%;
+                }
+
                 img{
                     margin-left: 1vw;
                     position: relative;
                     right: 0px;
                     .transition();
+
+                    @media @750{
+                        width: 40px;
+                        margin-left: 10px;
+                    }
                 }
-                
+
                 &:hover{
                     img{
                         right: -5px;
@@ -390,6 +474,11 @@ body {
                 margin-left: auto;
                 margin-right: 0;
                 margin-top: 1vw;
+
+                @media @750{
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
             }
         }
     }
@@ -400,12 +489,21 @@ body {
     .faq_section_content{
         display: flex;
 
+        @media @750{
+            margin-bottom: 100px;
+        }
+
         .left{
             width: 30%;
+
             .shape3{
                 position: relative;
                 left: -47.5vw;
                 width: 72vw;
+            }
+
+            @media @750{
+                display: none;
             }
         }
 
@@ -415,9 +513,26 @@ body {
             flex-direction: column;
             justify-content: center;
 
+            @media @750{
+                width: 100%;
+            }
+
             .right_content{
                 padding: 0 10vw;
                 box-sizing: border-box;
+
+                @media @1100{
+                    padding-right: 50px;
+                }
+
+                @media @1020{
+                    padding:0 50px;
+                }
+
+                @media @750{
+                    padding:0 20px;
+                }
+
                 h2{
                     .medium_headline();
                     margin-bottom: 4.5vw;
@@ -432,6 +547,10 @@ body {
                         cursor: pointer;
                         .transition();
 
+                        @media @750{
+                            padding: 20px 0;
+                        }
+
                         &:first-child{
                             border-top: 1px solid @color1;
                         }
@@ -439,6 +558,7 @@ body {
                         &.active {
                 
                           h3 {
+                            
                             .opener {
                               span {
                                 &:nth-of-type(2) {
@@ -454,6 +574,11 @@ body {
                           .font2M();
                           text-transform: uppercase;
                           position: relative;
+
+                          @media @750{
+                            padding-right: 40px;
+                            box-sizing: border-box;
+                        }
             
                 
                           .opener {
@@ -464,6 +589,15 @@ body {
                             right: 0;
                             top: 100%;
                             transform: translateY(-50%);
+
+                            @media @1020{
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                            @media @750{
+                                top: 20px;
+                            }
                 
                             span {
                               display: inline-block;
@@ -471,6 +605,10 @@ body {
                               background-color: @color1;
                               width: 26px;
                               position: absolute;
+
+                              @media @1020{
+                                width: 20px;
+                              }
                 
                               &:nth-of-type(2) {
                                 left: 50%;

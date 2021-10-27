@@ -144,7 +144,7 @@ get_header(); ?>
         <section class="contact_section fadein_wrap">
             <img src="<?php echo get_template_directory_uri(); ?>/images/contact_circle.svg" alt="separator" class="contact_circle">
             <div class="contact_section_wrap">
-                <div class="contact_section_content">
+                <div class="contact_section_content with_form">
                     <h2>
                     To register for a class, <br>contact us to schedule a<br> 15 minute consultation
                     </h2>

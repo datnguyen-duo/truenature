@@ -2,18 +2,40 @@ footer{
     padding: 0 11vw;
     box-sizing: border-box;
 
+    @media @1100{
+        padding: 0 50px;
+    }
+
+    @media @750{
+        padding: 0 20px;
+    }
+    
     .footer_content{
         border-top: 1px solid @color1;
         padding-top: 5vw;
         padding-bottom: 1.4vw;
         box-sizing: border-box;
 
+        @media @750{
+            padding-bottom: 20px;
+            padding-top: 50px;
+        }
+
         .first_footer_section{
             display: flex;
             justify-content: space-between;
             margin-bottom: 5vw;
 
+            @media @750{
+                margin-bottom: 50px;
+            }
+
             .left{
+
+                @media @750{
+                    width: 60%;
+                }
+
                 h3{
                     .small_headline();
                     margin-bottom: 1vw;                 
@@ -32,6 +54,10 @@ footer{
                     cursor: pointer;
                     display: block;
 
+                    @media @750{
+                        right: 20px;
+                    }
+
                     .marquee{
                         position: absolute;
                         top: 50%;
@@ -41,6 +67,16 @@ footer{
                         z-index: 1;
                         height: 9vw;
                         // animation: rotation 10s infinite linear;
+
+                        @media @1020{
+                            width: 120px;
+                            height: 120px;
+                        }
+
+                        @media @750{
+                            width: 100px;
+                            height: 100px;
+                        }
                     }
 
                     .arrow{
@@ -51,6 +87,14 @@ footer{
                         transform: translate(-50%, -50%);
                         z-index: 1;
                         z-index: 3;
+
+                        @media @1020{
+                            width: 40px;
+                        }
+
+                        @media @750{
+                            width: 30px;
+                        }
                     }
 
                     a{
@@ -64,6 +108,16 @@ footer{
                         width: 7vw;
                         height: 7vw;
                         border-radius: 100%;
+
+                        @media @1020{
+                            width: 90px;
+                            height: 90px;
+                        }
+
+                        @media @750{
+                            width: 70px;
+                            height: 70px;
+                        }
                         // animation: reverseRotation 10s infinite paused;
 
                     }
@@ -87,7 +141,17 @@ footer{
             justify-content: space-between;
             margin-bottom: 5vw;
 
+            @media @750{
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+            }
+
             .left{
+
+                @media @750{
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
                 .single_info{
                     position: relative;
                     display: inline-block;
@@ -112,6 +176,12 @@ footer{
                         background-color: @color1;
                         margin: 0 3vw;
                         transform: translateY(30%) skew(-20deg, 0deg);
+
+                        @media @750{
+                            height: 50px;
+                            top: -7px;
+                            margin: 0 10px;
+                        }
                     }
 
                     &:last-child{
@@ -123,6 +193,11 @@ footer{
             }
 
             .right{
+
+                @media @750{
+                    width: 100%;
+                }
+
                 ul{
                     li{
                         margin-bottom: 0.2vw;
@@ -168,6 +243,13 @@ footer{
             .form_holder{
                 width: 43vw;
 
+                @media @1020{
+                    width: 60vw;
+                }
+                
+                @media @750{
+                    width: 100%;
+                }
                 p{
                     .text();
                     color: #898989;
@@ -188,9 +270,22 @@ footer{
                         box-sizing: border-box;
                         color: @color1;
 
+                        @media @1020{
+                            font-size: 14px;
+                        }
+
+                        @media @750{
+                            padding: 5px 0;
+                        }
+        
+
                         &::placeholder { /* Firefox 18- */
                             color: @color1;
                             font-size: 1.1vw;
+
+                            @media @1020{
+                                font-size: 14px;
+                            }
                         }
                     }
 
