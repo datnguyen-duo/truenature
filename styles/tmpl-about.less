@@ -15,9 +15,9 @@
     @media @750{
       top: -2.5%;
       right: auto;
-      left: 40%;
+      left: 36%;
       transform: translateX(-50%);
-      width: 210px;
+      width: 260px;
     }
       
   }
@@ -30,8 +30,8 @@
     width: 46vw;
 
     @media @750{
-      width: 51vw;
-      top: 6.6%;
+      width: 260px;
+      top: 7.6%;
     }
   }
 
@@ -51,7 +51,8 @@
     }
 
     @media @750{
-      padding: 150px 20px 150px 20px;
+      max-width: 90vw;
+      padding: 220px 0px 220px 0px;
     }
 
     h1 {
@@ -71,12 +72,16 @@
       text-transform: uppercase;
 
       @media @750{
-        white-space: nowrap;
-        overflow-x: auto;
+        // white-space: nowrap;
+        // overflow-x: auto;
       }
 
       a, span{
         display: inline-block;
+
+        @media @750{
+          font-size: 12px;
+        }
       }
 
       a{
@@ -249,7 +254,8 @@
             top: auto;
             flex-direction: row;
             margin-top: 30px;
-            justify-content: center;
+            // justify-content: center;
+            justify-content: space-around;
           }
 
           .image_holder{
@@ -267,9 +273,13 @@
             }
 
             @media @750{
-              margin-right: 10px;
-              width: 70px;
-              height: 70px;
+              // margin-right: 10px;
+              // width: 70px;
+              // height: 70px;
+
+              margin-right: 0px;
+              width: 30vw;
+              height: 30vw;
             }
 
             img{
@@ -292,6 +302,11 @@
               height: 140px;
             }
 
+            @media @750{
+              width: 30vw;
+              height: 30vw;
+            }
+
             p{
               .text();
               font-size: 0.85vw;
@@ -299,6 +314,10 @@
 
               @media @1100{
                 font-size: 12px;
+              }
+
+              @media @750{
+                font-size: 2.6vw;
               }
 
               a{
@@ -445,8 +464,8 @@
             .font1R();
             font-size: 1vw;
             border-top: 1px solid @color1;
-            padding-top: 0.2vw;
-            margin-bottom: 2vw;
+            padding-top: 1vw;
+            margin-bottom: 2.7vw;
 
             @media @750{
               margin-bottom: 20px;
@@ -539,6 +558,11 @@
                   position: relative;
                   padding-top: 100%;
                   overflow: hidden;
+
+                  @media @750{
+                    width: 50%;
+                    padding-top: 50%;
+                  }
 
                   img{
                     .cropped_img();

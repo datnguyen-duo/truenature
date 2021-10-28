@@ -1,6 +1,18 @@
 <?php
 /* Template Name: Contact */
 
+$section_1_image = get_field('section_1_image');
+$section_1_headline = get_field('section_1_headline');
+$phone = get_field('phone');
+$email = get_field('email');
+
+$section_2_headline = get_field('section_2_headline');
+$section_2_address = get_field('section_2_address');
+$section_2_address_link = get_field('section_2_address_link');
+
+$section_3_headline = get_field('section_3_headline');
+$section_3_contact_id = get_field('section_3_contact_id');
+
 get_header(); ?>
 
 
@@ -9,25 +21,34 @@ get_header(); ?>
         <section class="first_section">
             <div class="first_section_content fadein_wrap">
                 <div class="left">
-                    <div class="image_holder">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/contact/contact.png" alt="Yoga Therapy">
-                    </div>
+                    <?php if($section_1_image): ?>
+                        <div class="image_holder">
+                            <img src="<?php echo $section_1_image['url'] ?>" alt="<?php echo $section_1_image['alt'] ?>">
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="right">
                     <div class="right_content">
-                        <h2>
-                            contact <br>  us
-                        </h2>
+                        <?php if($section_1_headline): ?>
+                            <h2>
+                                <?php echo $section_1_headline; ?>
+                            </h2>
+                        <?php endif; ?>
 
                         <div class="contact_info">
-                            <div class="single_info">
-                                <span>Call us</span>
-                                <a href="tel:5306807044">530/680-7044</a>
-                            </div>
-                            <div class="single_info">
-                                <span>Email us</span>
-                                <a href="mailto:briana@truenature.us.com">briana@truenature.us.com</a>
-                            </div>
+                            <?php if($phone): ?>
+                                <div class="single_info">
+                                    <span>Call us</span>
+                                    <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if($email): ?>
+                                <div class="single_info">
+                                    <span>Email us</span>
+                                    <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+                                </div>
+                            <?php endif; ?>
                             
                         </div>
                     </div>
@@ -39,18 +60,22 @@ get_header(); ?>
             <div class="second_section_content fadein_wrap">
                 <div class="left">
                     <div class="left_content">
-                        <h2>
-                            //find us at
-                        </h2>
-
-                        <h3>
-                            35 North Front Street <br> Rio Vista CA
-                        </h3>
-
-                        <a>
-                            Get directions
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
-                        </a>
+                        <?php if($section_2_headline): ?>
+                            <h2>
+                                <?php echo $section_2_headline; ?>
+                            </h2>
+                        <?php endif; ?>
+                        <?php if($section_2_address): ?>
+                            <h3>
+                                <?php echo $section_2_address; ?>
+                            </h3>
+                        <?php endif; ?>
+                        <?php if($section_2_address_link): ?>
+                            <a href="<?php echo $section_2_address_link; ?>" target="_blank">
+                                Get directions
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="right">
@@ -67,7 +92,9 @@ get_header(); ?>
 
                 <div class="right">
                     <div class="right_content">
-                        <h2>//Send us a <br> message</h2>
+                        <?php if($section_3_headline): ?>
+                            <h2><?php echo $section_3_headline; ?></h2>
+                        <?php endif; ?>
 
                         <div class="form_holder">
                             <form action="">
@@ -97,14 +124,32 @@ get_header(); ?>
     // Initialize and add the map
     var map_style = [
   {
+    "featureType": "administrative",
     "elementType": "geometry",
     "stylers": [
       {
-        "color": "#f5f5f5"
+        "visibility": "off"
       }
     ]
   },
   {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
     "elementType": "labels.icon",
     "stylers": [
       {
@@ -113,144 +158,10 @@ get_header(); ?>
     ]
   },
   {
-    "elementType": "labels.text.fill",
+    "featureType": "transit",
     "stylers": [
       {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      {
-        "color": "#f5f5f5"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.land_parcel",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#bdbdbd"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e5e5e5"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#ffffff"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#dadada"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
-  },
-  {
-    "featureType": "transit.line",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e5e5e5"
-      }
-    ]
-  },
-  {
-    "featureType": "transit.station",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#c9c9c9"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
+        "visibility": "off"
       }
     ]
   }

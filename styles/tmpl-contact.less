@@ -15,6 +15,7 @@
 
             .first_section_content{
                 padding: 0 11vw;
+                padding-left: 6vw;
                 box-sizing: border-box;
                 display: flex;
                 flex-wrap: wrap;
@@ -120,10 +121,11 @@
             }
 
             .second_section_content{
-                padding: 0 11vw;
+                padding: 0 6vw;
                 box-sizing: border-box;
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-between;
                 .slide_up();
 
                 @media @1100{
@@ -166,11 +168,17 @@
                     //   left: -2.6vw;
                       white-space: nowrap;
                       .medium_headline();
+                      font-size: 5.2vw;
                       margin-bottom: 3vw;
                       color: @color2;
-
+                
                       @media @1100{
                         margin-bottom: 30px;
+                        font-size: 45px;
+                      }
+
+                      @media @1020{
+                        font-size: 35px;
                       }
                     }
             
@@ -199,9 +207,13 @@
                 }
             
                 .right {
-                    width: 63%;
+                    width: 58%;
                     position: relative;
                     z-index: 1;
+
+                    @media @1100{
+                        width: 63%;
+                    }
 
                     @media @1020{
                         width: 55%;
@@ -278,6 +290,15 @@
                             .medium_headline();
                             margin-bottom: 4.5vw;
                             color: @color2;
+                            font-size: 5.2vw;
+
+                            @media @1100{
+                                font-size: 45px;
+                            }
+    
+                            @media @1020{
+                                font-size: 35px;
+                            }
 
                             @media @750{
                                 margin-bottom: 30px;

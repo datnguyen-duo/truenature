@@ -91,7 +91,7 @@ footer{
                         @media @1020{
                             width: 40px;
                         }
-
+                        
                         @media @750{
                             width: 30px;
                         }
@@ -232,6 +232,21 @@ footer{
                                 }
                             }
                         }
+
+                        &.current-menu-item{
+                            a{
+                                left: 1vw;
+        
+                                @media @1100{
+                                    left: 10px
+                                }
+            
+                                &:before{
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -306,10 +321,15 @@ footer{
                         align-items: center;
 
                         img{
-                            margin-left: 10px;
+                            margin-left: 1vw;
                             position: relative;
                             right: 0;
                             .transition();
+
+                            @media @750{
+                                width: 40px;
+                                margin-left: 10px;
+                            }
                         }
 
                         &:hover{
@@ -322,11 +342,57 @@ footer{
             }
         }
 
-        .copyright{
-            .text();
-            color: #898989;
-            margin-top: 0.5vw;
-            text-align: center;
+        .copyright_wrap{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            &.center{
+                justify-content: space-between;
+
+                @media @750{
+                    justify-content: center;
+                }
+            }
+
+            @media @750{
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 50px;
+            }
+
+            .certification{
+                max-width: 11vw;
+
+                @media @1020{
+                    max-width: 150px;
+                }
+
+                @media @750{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                img{
+                    width: 100%;
+
+                    @media @750{
+                        width: 150px;
+                        margin: auto;
+                    }
+                }
+            }
+
+            .copyright{
+                .text();
+                color: #898989;
+                margin-top: 0.5vw;
+                text-align: center;
+
+                @media @750{
+                    width: 80%;
+                }
+            }
         }
     }
 }

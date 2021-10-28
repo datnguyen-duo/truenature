@@ -27,6 +27,10 @@ header{
             width: 70px;
         }
 
+        @media @750{
+            width: 55px;
+        }
+
         &.visible{
             visibility: visible;
             opacity: 1;
@@ -78,6 +82,10 @@ header{
             @media @1100{
                 width: 70px;
             }
+
+            @media @750{
+                width: 55px;
+            }
             // animation: menuRotation 5s infinite linear;
         }
         
@@ -90,6 +98,10 @@ header{
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+
+            @media @750{
+                font-size: 12px;
+            }
         }
 
         &:hover{
@@ -164,6 +176,21 @@ header{
                 }
     
                 &:hover{
+                    a{
+                        left: 1vw;
+
+                        @media @1100{
+                            left: 10px
+                        }
+    
+                        &:before{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                &.current-menu-item{
                     a{
                         left: 1vw;
 

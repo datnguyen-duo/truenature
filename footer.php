@@ -9,16 +9,27 @@
  * @package True_Nature
  */
 
+ $footer_headline = get_field('footer_headline', 'option');
+ $footer_subheadline = get_field('footer_subheadline', 'option');
+ $footer_address = get_field('footer_address', 'option');
+ $footer_phone = get_field('footer_phone', 'option');
+ $footer_email = get_field('footer_email', 'option');
+ $copyright_text = get_field('copyright_text', 'option');
+ $certificate_image = get_field('certificate_image', 'option');
 ?>
 
 <footer>
     <div class="footer_content">
         <div class="first_footer_section">
             <div class="left">
-                <h3>Interested in learning more? <br> Ready to begin?</h3>
-                <p>
-                    Schedule a free 15 minute consultation.
-                </p>
+                <?php if($footer_headline): ?>
+                    <h3><?php echo $footer_headline; ?></h3>
+                <?php endif; ?>
+                <?php if($footer_subheadline): ?>
+                    <p>
+                        <?php echo $footer_subheadline; ?>
+                    </p>
+                <?php endif; ?>
             </div>
             <div class="right">
                 <div class="button_holder">
@@ -33,41 +44,37 @@
         <div class="second_footer_section">
             <div class="left">
                 <div class="single_info">
-                    <p>
-                        35 North Front Street <br> Rio Vista CA
-                    </p>
+                    <?php if($footer_address): ?>
+                        <p>
+                            <?php echo $footer_address; ?>
+                        </p>
+                    <?php endif; ?>
                 </div>
                 <div class="single_info">
-                    <a href="">
-                        530/680-7044
-                    </a>
-                    <a href="">
-                        Email address
-                    </a>
+                    <?php if($footer_phone): ?>
+                        <a href="tel:<?php echo $footer_phone; ?>">
+                            <?php echo $footer_phone; ?>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if($footer_email): ?>
+                        <a href="mailto:<?php echo $footer_email; ?>">
+                            <?php echo $footer_email; ?>
+                        </a>
+                    <?php endif; ?>
                 </div>
                 
             </div>
             <div class="right">
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/yoga-therapy">yoga therapy</a>
-                    </li>
-                    <li>
-                        <a href="/group-classes">group classes</a>
-                    </li>
-                    <li>
-                        <a href="/mentoring">mentoring</a>
-                    </li>
-                    <li>
-                        <a href="/about">studio</a>
-                    </li>
-                    <li>
-                        <a href="/contact">contact us</a>
-                    </li>
-                </ul>
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'menu-1',
+                            'menu_id'        => 'primary',
+                            'container' => false,
+                        )
+                    );
+                ?>
             </div>
         </div>
 
@@ -80,6 +87,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
                     </button>
                 </form>
+
                 <p>
                     To be notified of new classes series, guest instructors and special workshop offerings, join our mailing list.
                 </p>
@@ -87,9 +95,22 @@
             
         </div>
 
-        <div class="copyright">
-        Copyright 2021 true nature yoga and wellness / terms & conditions
+        <div class="copyright_wrap <?php if (is_page_template('templates/tmplt-classes.php') || is_page_template('templates/tmplt-therapy.php') || is_page_template('templates/tmplt-mentoring.php') || is_page_template('templates/tmplt-about.php')):?>center<?php endif;?>">
+            <?php if (is_page_template('templates/tmplt-classes.php') || is_page_template('templates/tmplt-therapy.php') || is_page_template('templates/tmplt-mentoring.php') || is_page_template('templates/tmplt-about.php')):?>
+                <?php if($certificate_image): ?>
+                    <div class="certification">
+                        <img src="<?php echo $certificate_image['url']; ?>" alt="<?php echo $certificate_image['alt']; ?>">
+                    </div>
+                <?php endif;?>
+            <?php endif;?>
+
+            <?php if($copyright_text): ?>
+                <div class="copyright">
+                    <?php echo $copyright_text; ?>
+                </div>
+            <?php endif; ?>
         </div>
+        
     </div>
 </footer>
         </div><!-- #scroll-container-->

@@ -1,6 +1,30 @@
 <?php
 /* Template Name: Mentoring */
 
+$hero_section_headline = get_field('hero_section_headline');
+$hero_section_link = get_field('hero_section_link');
+
+$section_1_image = get_field('section_1_image');
+$section_1_headline = get_field('section_1_headline');
+$section_1_description = get_field('section_1_description');
+
+$section_2_headline = get_field('section_2_headline');
+$section_2_image = get_field('section_2_image');
+$section_2_left_list = get_field('section_2_left_list');
+$section_2_right_list = get_field('section_2_right_list');
+$section_2_subheadline = get_field('section_2_subheadline');
+$section_2_description = get_field('section_2_description');
+
+$contact_section_description = get_field('contact_section_description');
+$contact_section_link = get_field('contact_section_link');
+
+$section_4_headline = get_field('section_4_headline');
+$section_4_description = get_field('section_4_description');
+$section_4_list = get_field('section_4_list');
+
+$faq_section_headline = get_field('faq_section_headline');
+$faq_section_questions = get_field('faq_section_questions');
+
 get_header(); ?>
 
 
@@ -9,31 +33,40 @@ get_header(); ?>
     <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/shape.png" class="shape2">
     <div class="template_mentoring_content">
         <div class="hero_content_inner">
-            <h1>mentoring</h1>
-            <a href="/contact">
-                Contact Us
-                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
-            </a>
+            <?php if($hero_section_headline): ?>
+                <h1><?php echo $hero_section_headline; ?></h1>
+            <?php endif; ?>
+            <?php if($hero_section_link): ?>
+                <a href="<?php echo $hero_section_link['url'] ?>" target="<?php echo $hero_section_link['target']; ?>">
+                    <?php echo $hero_section_link['title']; ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
+                </a>
+            <?php endif; ?>
         </div>
 
         <section class="first_section">
             <div class="first_section_content fadein_wrap">
                 <div class="left">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/white_lines.png" class="white_lines">
-                    <div class="image_holder fadein_wrap">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/mentoring.png" alt="Group Classes">
-                    </div>
+                    <?php if($section_1_image): ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/white_lines.png" class="white_lines">
+                        <div class="image_holder fadein_wrap">
+                            <img src="<?php echo $section_1_image['url']; ?>" alt="<?php echo $section_1_image['alt']; ?>">
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="right">
                     
                     <div class="right_content fadein_wrap">
-                        <h2>
-                            A link in the chain of the authentic transmission of yoga
-                        </h2>
-
-                        <p>
-                            For serious practitioners, teachers and therapists in the Viniyoga tradition, guidance on the path through a relationship with a primary teacher or mentor is an important part of the tradition. <br><br> Mentoring can also include support/tutoring in programs of study for teachers and therapists currently enrolled in professional training programs.
-                        </p>
+                        <?php if($section_1_headline): ?>
+                            <h2>
+                                <?php echo $section_1_headline; ?>
+                            </h2>
+                        <?php endif; ?>
+                        <?php if($section_1_description): ?>
+                            <p>
+                                <?php echo $section_1_description; ?>
+                            </p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -41,46 +74,59 @@ get_header(); ?>
 
         <section class="second_section">
             <div class="second_section_content fadein_wrap">
-                <p>
-                    Mentoring provides an outside perspective
-                </p>
+                <?php if($section_2_headline): ?>
+                    <p>
+                        <?php echo $section_2_headline; ?>
+                    </p>
+                <?php endif; ?>
 
                 <div class="second_section_list">
+                    
                     <div class="list_wrap">
-                        <ul>
-                            <li>
-                                Guiding choice and <br> adaptation of asana
-                            </li>
-                            <li>
-                                A sounding board with a<br> yoga philosophy lens
-                            </li>
-                        </ul>
+                        <?php if($section_2_left_list): ?>
+                            <ul>
+                                <?php foreach( $section_2_left_list as $singleItem ): ?>
+                                    <li>
+                                        <?php echo $singleItem['single_item'] ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
 
                     <div class="image_wrap">
-                        <div class="image_holder">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/mentoring/circle_image.png" alt="Group Classes">
-                        </div>
+                        <?php if($section_2_image): ?>
+                            <div class="image_holder">
+                                <img src="<?php echo $section_2_image['url']; ?>" alt="<?php echo $section_2_image['alt']; ?>">
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <div class="list_wrap">
-                        <ul>
-                            <li>
-                                Direction in appropriate <br> choice of meditation practice
-                            </li>
-                            <li>
-                                Connection to resources <br> and support on the path
-                            </li>
-                        </ul>
+                        <?php if($section_2_right_list): ?>
+                            <ul>
+                                <?php foreach( $section_2_right_list as $singleItem ): ?>
+                                    <li>
+                                        <?php echo $singleItem['single_item'] ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
-                <div class="separator"></div>
-                <p class="bottom">
-                    What makes you eligible?
-                </p>
 
-                <h2>
-                    A commitment to daily practice. <br> A willingness for honest self reflection. <br>experience with Viniyoga in private or group setting.
-                </h2>
+                <div class="separator"></div>
+
+                <?php if($section_2_subheadline): ?>
+                    <p class="bottom">
+                        <?php echo $section_2_subheadline; ?>
+                    </p>
+                <?php endif; ?>
+
+                <?php if($section_2_description): ?>
+                    <h2>
+                        <?php echo $section_2_description; ?>
+                    </h2>
+                <?php endif; ?>
             </div>
         </section>
 
@@ -88,15 +134,21 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/images/contact_circle.svg" alt="separator" class="contact_circle">
             <div class="contact_section_wrap">
                 <div class="contact_section_content">
-                    <h2>STEP ONE IS TO SETUP <br> YOUR FREE 15 MINUTE <br>PHONE CONSULTATION</h2>
                     
-                    <div class="separator">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/white_separator.svg" alt="separator">
-                    </div>
-                    <a href="/contact">
-                        Contact Us
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/white_arrow.svg" alt="arrow">
-                    </a>
+                    <?php if($contact_section_description): ?>
+                        <h2><?php echo $contact_section_description; ?></h2>
+                    <?php endif; ?>
+                    
+                    <?php if($contact_section_link): ?>
+                        <div class="separator">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/white_separator.svg" alt="separator">
+                        </div>
+                        
+                        <a href="<?php echo $contact_section_link['url'] ?>" target="<?php echo $contact_section_link['target'] ?>">
+                            <?php echo $contact_section_link['title'] ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/white_arrow.svg" alt="arrow">
+                        </a>
+                    <?php endif; ?>
                 </div>
                 
             </div>
@@ -104,39 +156,32 @@ get_header(); ?>
 
         <section class="fourth_section">
             <div class="fourth_section_content fadein_wrap">
-                <h2>//how it works</h2>
+                <?php if($section_4_headline): ?>
+                    <h2><?php echo $section_4_headline; ?></h2>
+                <?php endif; ?>
                 <!-- <p>
                     After you’ve had your consult call and we’ve decided to work together, what to expect:
                 </p> -->
 
                 <div class="tools">
-                    <p class="tools_desc">
-                        After you’ve had your consult call and we’ve decided to work together, what to expect:
-                    </p>
-
-                    <div class="tools_wrap">
-                        <div class="single_tool">
-                            <h3>Intake</h3>
-                            <span>Plan for 1.5 - 2 hours (It goes fast!)</span>
-                            <p>
-                                We will first talk together about you goals and history, and begin with some simple breath and movement. You will leave with an introductory practice.
-                            </p>
+                    <?php if($section_4_description): ?>
+                        <p class="tools_desc">
+                            <?php echo $section_4_description; ?>
+                        </p>
+                    <?php endif; ?>
+                    <?php if($section_4_list): ?>
+                        <div class="tools_wrap">
+                            <?php foreach( $section_4_list as $singleItem ): ?>
+                                <div class="single_tool">
+                                    <h3><?php echo $singleItem['section_4_list_item_headline'] ?></h3>
+                                    <span><?php echo $singleItem['section_4_list_item_subheadline'] ?></span>
+                                    <p>
+                                        <?php echo $singleItem['section_4_list_item_description'] ?>
+                                    </p>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
-                        <div class="single_tool">
-                            <h3>Follow-up</h3>
-                            <span>Plan for 1 hour-1 hour 15 min</span>
-                            <p>
-                                We will refine and deepen your practice together.
-                            </p>
-                        </div>
-                        <div class="single_tool">
-                            <h3>frequency</h3>
-                            <span>Appropriate to the individual</span>
-                            <p>
-                                Some meet weekly, others monthly, or a few times a year. Recommendations depend on your present state and goals.
-                            </p>
-                        </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
@@ -149,62 +194,28 @@ get_header(); ?>
 
                 <div class="right">
                     <div class="right_content">
-                        <h2>Frequently asked questions</h2>
-
+                        <?php if($faq_section_headline): ?>
+                            <h2><?php echo $faq_section_headline ?></h2>
+                        <?php endif; ?>
+                        <?php if($faq_section_questions): ?>
                         <div class="faq_wrap">
-                            <div class="single_question">
-                                <h3>
-                                    I’ve never done yoga. Do I need to be flexible?
-                                    <div class="opener">
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </h3>
+                            <?php foreach( $faq_section_questions as $singleItem ): ?>
+                                <div class="single_question">
+                                    <h3>
+                                        <?php echo $singleItem['faq_single_question'] ?>
+                                        <div class="opener">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </h3>
 
-                                <p>
-                                    Viniyoga has practices to meet you, wherever you are starting. Come as you are.
-                                </p>
-                            </div>
-                            <div class="single_question">
-                                <h3>
-                                    What is the cost?
-                                    <div class="opener">
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </h3>
-
-                                <p>
-                                    Viniyoga has practices to meet you, wherever you are starting. Come as you are.
-                                </p>
-                            </div>
-                            <div class="single_question">
-                                <h3>
-                                    What do I need to bring to the studio for my first visit?
-                                    <div class="opener">
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </h3>
-
-                                <p>
-                                    Viniyoga has practices to meet you, wherever you are starting. Come as you are.
-                                </p>
-                            </div>
-                            <div class="single_question">
-                                <h3>
-                                    Do you take insurance?
-                                    <div class="opener">
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </h3>
-
-                                <p>
-                                    Viniyoga has practices to meet you, wherever you are starting. Come as you are.
-                                </p>
-                            </div>
+                                    <p>
+                                        <?php echo $singleItem['faq_single_answer'] ?>
+                                    </p>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
+                        <?php endif; ?>
                     </div>
                     
                 </div>

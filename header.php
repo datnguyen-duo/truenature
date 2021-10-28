@@ -60,26 +60,15 @@
 
 <div class="nav_holder">
 	<nav>
-		<ul>
-			<li>
-				<a href="/">Home</a>
-			</li>
-			<li>
-				<a href="/yoga-therapy">yoga therapy</a>
-			</li>
-			<li>
-				<a href="/group-classes">group classes</a>
-			</li>
-			<li>
-				<a href="/mentoring">mentoring</a>
-			</li>
-			<li>
-				<a href="/about">studio</a>
-			</li>
-			<li>
-				<a href="/contact">contact us</a>
-			</li>
-		</ul>
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary',
+					'container' => false,
+				)
+			);
+		?>
 	</nav>
 </div>
 
