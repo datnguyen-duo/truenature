@@ -97,16 +97,7 @@ get_header(); ?>
                         <?php endif; ?>
 
                         <div class="form_holder">
-                            <form action="">
-                                <input type="text" name="name" placeholder="Name">
-                                <input type="email" name="email" placeholder="Email">
-                                <input type="text" name="subject" placeholder="Subject">
-                                <input type="text" name="message" placeholder="Your Message">
-                                <button>
-                                    Submit
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
-                                </button>
-                            </form>
+                            <?php echo do_shortcode('[contact-form-7 id="219" title="Contact form 1"]'); ?>
                         </div>
                     </div>
                 </div>

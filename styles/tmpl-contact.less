@@ -309,6 +309,13 @@
                             text-align: right;
 
                             form{
+                                p{
+                                    margin-bottom: 4vw;
+
+                                    @media @750{
+                                        margin-bottom: 30px;
+                                    }
+                                }
                                 input{
                                     display: block;
                                     box-sizing: border-box;
@@ -320,7 +327,6 @@
                                     color: @color1;
                                     .font1R;
                                     line-height: 1.6em;
-                                    margin-bottom: 4vw;
                                     padding-bottom: 0.4vw;
 
                                     @media @1100{
@@ -328,7 +334,6 @@
                                     }
 
                                     @media @750{
-                                        margin-bottom: 30px;
                                         padding-bottom: 5px;
                                     }
 
@@ -349,8 +354,21 @@
                                         }
                                     }
                                 }
+                                br{
+                                    display: none;
+                                }
 
-                                button{
+                                .button_wrap{
+                                    img{
+                                        margin-left: 1vw;
+                                        position: relative;
+                                        // top: 4px;
+                                    }
+                                }
+                                .wpcf7-submit{
+                                    width: auto;
+                                    display: inline-block;
+                                    border: none;
                                     background-color: transparent;
                                     box-shadow: none;
                                     border: none;
@@ -359,11 +377,6 @@
                                     letter-spacing: 1.6px;
                                     margin: auto;
                                     text-transform: uppercase;
-                        
-                                    img{
-                                        margin-left: 1vw;
-                                        position: relative;
-                                    }
                                 }
                             }
                         }

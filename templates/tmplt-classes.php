@@ -106,7 +106,7 @@ get_header(); ?>
                         </div>
                     </div>
                 <?php endif; ?>
-                
+
                 <?php if($section_3_secondary_headline): ?>
                     <p class="third_section_description bottom">
                         <?php echo $section_3_secondary_headline; ?>
@@ -130,13 +130,14 @@ get_header(); ?>
                     <?php endif; ?>
 
                     <div class="form_holder">
-                        <form action="">
+                        <?php echo do_shortcode('[contact-form-7 id="221" title="Classes Form"]'); ?>
+                        <!-- <form action="">
                             <input type="text" placeholder="Email address">
                             <button>
                                 SUBMIT
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/white_arrow.svg" alt="arrow">
                             </button>
-                        </form>
+                        </form> -->
                     </div>
                     
                     <?php if($contact_section_link): ?>

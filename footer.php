@@ -80,13 +80,7 @@
 
         <div class="thrid_footer_section">
             <div class="form_holder">
-                <form action="">
-                    <input type="text" placeholder="Email address">
-                    <button>
-                        SUBMIT
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="arrow">
-                    </button>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="220" title="Footer Form"]'); ?>
 
                 <p>
                     To be notified of new classes series, guest instructors and special workshop offerings, join our mailing list.

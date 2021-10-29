@@ -147,6 +147,41 @@
     overflow: hidden;
 }
 
+.wpcf7-spinner{
+    display: none;
+}
+
+.wpcf7-not-valid-tip{
+    // position: absolute;
+    // left: 0;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+    .font2R();
+}
+
+.wpcf7 form.sent .wpcf7-response-output{
+    border: none;
+    .font2R();
+    font-size: 14px;
+    line-height: 1.2em;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    color: #00700a;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output{
+    border: none;
+    .font2R();
+    font-size: 14px;
+    line-height: 1.2em;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    color: #dc3232;
+}
+
 #page {
     min-height: 100vh;
     display: flex;
@@ -412,10 +447,11 @@ body {
 
             &.with_form{
                 .separator{
-    
+
                     @media @750{
                         height: 30px;
                         display: none;
+
                         img{
                             height: 100%;
                         }
@@ -442,6 +478,11 @@ body {
                     max-width: 100%;
                     margin: auto;
                     margin-bottom: 20px;
+
+                    form{
+                        max-width: 90%;
+                        margin: auto;
+                    }
                 }
             }
 
@@ -478,17 +519,76 @@ body {
                 justify-content: center;
 
                 @media @750{
-                    max-width: 100%;
+                    max-width: 80%;
                 }
 
                 img{
                     margin-left: 1vw;
                     position: relative;
                     right: 0px;
+                    width: 3vw;
                     .transition();
 
-                    @media @750{
+                    @media @1020{
                         width: 40px;
+                    }
+
+                    @media @750{
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            a{
+                @media @750{
+                    font-size: 12px;
+                }
+            }
+
+            .wpcf7-form-control-wrap{
+                width: 100%;
+
+                .wpcf7-not-valid-tip{
+                    text-transform: initial;
+
+                    @media @750{
+                        font-size: 12px;
+                    }
+                }   
+            }
+
+            .wpcf7 form.invalid .wpcf7-response-output{
+                @media @750{
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
+            }
+
+            p{
+                max-width: 100%;
+            }
+
+            .button_wrap{
+                display: flex;
+                margin-top: 1vw;
+                justify-content: center;
+
+                @media @750{
+                    margin-top: 10px;
+                }
+
+                img{
+                    margin-left: 1vw;
+                    position: relative;
+                    right: 0px;
+                    width: 3vw;
+                    .transition();
+
+                    @media @1020{
+                        width: 40px;
+                    }
+
+                    @media @750{
                         margin-left: 10px;
                     }
                 }
@@ -500,19 +600,21 @@ body {
                 }
             }
 
-            button{
+            .wpcf7-submit{
+                width: auto;
+                display: inline-block;
                 background: none;
+                padding: 0px;
                 box-shadow: none;
                 border: none;
                 display: flex;
+                margin-top: 0px;
                 align-items: center;
                 margin-left: auto;
                 margin-right: 0;
-                margin-top: 1vw;
 
                 @media @750{
                     font-size: 12px;
-                    margin-top: 10px;
                 }
             }
         }
