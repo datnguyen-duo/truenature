@@ -142,7 +142,7 @@
                         right: -7vw;
                         .medium_headline();
                         text-align: right;
-                        font-size: 3vw;
+                        font-size: 2.7vw;
                         z-index: 2;
 
                         @media @750{
@@ -310,6 +310,21 @@
                     }
                 }
                 .classes_list_content{
+                    
+                    @media @750{
+                        padding-left: 20px;
+
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            left: 20px;
+                            width: 1px;
+                            background-color: #000;
+                            height: 100%;
+                            top: 0;
+                        }
+                    }
+
                     .single_class{
                         display: flex;
                         position: relative;
@@ -340,8 +355,21 @@
                                 text-align: right;
 
                                 @media @750{
+                                    position: relative;
                                     text-align: left;
                                     margin-bottom: 5px;
+
+                                    &:before{
+                                        content: '';
+                                        position: absolute;
+                                        left: -20px;
+                                        width: 15px;
+                                        background-color: #000;
+                                        height: 1px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+
                                 }
 
                                 &:after{
@@ -398,6 +426,10 @@
                                     .text();
                                     max-width: 26vw;
                                     margin-bottom: 1vw;
+
+                                    &:last-child{
+                                        margin-bottom: 0px;
+                                    }
 
                                     @media @750{
                                         margin-bottom: 20px;
