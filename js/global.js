@@ -101,7 +101,7 @@
       sessionStorage.setItem("loader", "true");
       var tl = gsap.timeline({
         onComplete: function () {
-          gsap.set(loader_content, { pointerEvents: "none" });
+          gsap.set(".loader", { pointerEvents: "none" });
         },
       });
 
