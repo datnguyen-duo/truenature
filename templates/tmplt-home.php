@@ -24,13 +24,11 @@ get_header(); ?>
 
         <div class="hero_content">
             <?php if($main_headline): ?>
-                <h1><?php echo $main_headline; ?></h1>
+                <?php echo $main_headline; ?>
             <?php endif; ?>
 
             <?php if($main_subheadline): ?>
-                <p>
-                    <?php echo $main_subheadline; ?>
-                </p>
+                <?php echo $main_subheadline; ?>
             <?php endif; ?>
         </div>
         
@@ -68,9 +66,7 @@ get_header(); ?>
                 <div class="left">
                     <div class="left_content fadein_wrap">
                         <?php if($section_2_headline): ?>
-                            <h2>
-                                <?php echo $section_2_headline; ?>
-                            </h2>
+                            <?php echo $section_2_headline; ?>
                         <?php endif; ?>
                         <?php if($section_2_description): ?>
                             <p>
@@ -119,7 +115,7 @@ get_header(); ?>
             <div class="fourth_section_content fadein_wrap">
             
                 <?php if($section_4_headline): ?>
-                    <h2><?php echo $section_4_headline; ?></h2>
+                    <?php echo $section_4_headline; ?>
                 <?php endif; ?>
                 <?php if($testimonials_slider): ?>
                     <div class="testimonials">

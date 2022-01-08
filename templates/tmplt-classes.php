@@ -27,7 +27,7 @@ get_header(); ?>
     <div class="template_classes_content">
         <div class="hero_content_inner">
             <?php if($hero_section_headline): ?>
-                <h1><?php echo $hero_section_headline; ?></h1>
+                <?php echo $hero_section_headline; ?>
             <?php endif; ?>
             <?php if($hero_section_link): ?>
                 <a href="<?php echo $hero_section_link['url'] ?>" target="<?php echo $hero_section_link['target']; ?>">
@@ -42,9 +42,7 @@ get_header(); ?>
                 <div class="left">
                     <div class="left_content">
                         <?php if($section_1_headline): ?>
-                            <h2>
-                                <?php echo $section_1_headline; ?>
-                            </h2>
+                            <?php echo $section_1_headline; ?>
                         <?php endif; ?>
                     </div>
                 </div>

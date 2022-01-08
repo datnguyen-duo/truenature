@@ -30,9 +30,7 @@ get_header(); ?>
                 <div class="right">
                     <div class="right_content">
                         <?php if($section_1_headline): ?>
-                            <h2>
-                                <?php echo $section_1_headline; ?>
-                            </h2>
+                            <?php echo $section_1_headline; ?>
                         <?php endif; ?>
 
                         <div class="contact_info">
@@ -61,9 +59,7 @@ get_header(); ?>
                 <div class="left">
                     <div class="left_content">
                         <?php if($section_2_headline): ?>
-                            <h2>
-                                <?php echo $section_2_headline; ?>
-                            </h2>
+                            <?php echo $section_2_headline; ?>
                         <?php endif; ?>
                         <?php if($section_2_address): ?>
                             <h3>
@@ -93,7 +89,7 @@ get_header(); ?>
                 <div class="right">
                     <div class="right_content">
                         <?php if($section_3_headline): ?>
-                            <h2><?php echo $section_3_headline; ?></h2>
+                            <?php echo $section_3_headline; ?>
                         <?php endif; ?>
 
                         <div class="form_holder">

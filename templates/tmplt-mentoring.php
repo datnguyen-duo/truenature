@@ -34,7 +34,7 @@ get_header(); ?>
     <div class="template_mentoring_content">
         <div class="hero_content_inner">
             <?php if($hero_section_headline): ?>
-                <h1><?php echo $hero_section_headline; ?></h1>
+                <?php echo $hero_section_headline; ?>
             <?php endif; ?>
             <?php if($hero_section_link): ?>
                 <a href="<?php echo $hero_section_link['url'] ?>" target="<?php echo $hero_section_link['target']; ?>">
@@ -58,9 +58,7 @@ get_header(); ?>
                     
                     <div class="right_content fadein_wrap">
                         <?php if($section_1_headline): ?>
-                            <h2>
-                                <?php echo $section_1_headline; ?>
-                            </h2>
+                            <?php echo $section_1_headline; ?>
                         <?php endif; ?>
                         <?php if($section_1_description): ?>
                             <p>
@@ -157,7 +155,7 @@ get_header(); ?>
         <section class="fourth_section">
             <div class="fourth_section_content fadein_wrap">
                 <?php if($section_4_headline): ?>
-                    <h2><?php echo $section_4_headline; ?></h2>
+                    <?php echo $section_4_headline; ?>
                 <?php endif; ?>
                 <!-- <p>
                     After you’ve had your consult call and we’ve decided to work together, what to expect:

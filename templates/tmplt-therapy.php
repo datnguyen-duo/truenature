@@ -39,7 +39,7 @@ get_header(); ?>
     <div class="template_therapy_content">
         <div class="hero_content_inner">
             <?php if($hero_section_headline): ?>
-                <h1><?php echo $hero_section_headline; ?></h1>
+                <?php echo $hero_section_headline; ?>
             <?php endif; ?>
             <?php if($hero_section_link): ?>
                 <a href="<?php echo $hero_section_link['url'] ?>" target="<?php echo $hero_section_link['target']; ?>">
@@ -139,7 +139,7 @@ get_header(); ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle3.svg" class="circle3">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/therapy/circle1.svg" class="circle1">
                 <?php if($section_4_headline): ?>
-                    <h2><?php echo $section_4_headline; ?></h2>
+                    <?php echo $section_4_headline; ?>
                 <?php endif; ?>
                 <?php if($section_4_description): ?>
                     <p>
@@ -181,7 +181,7 @@ get_header(); ?>
         <section class="fifth_section">
             <div class="fifth_section_content fadein_wrap">
                 <?php if($section_5_headline): ?>
-                    <h2><?php echo $section_5_headline; ?></h2>
+                    <?php echo $section_5_headline; ?>
                 <?php endif; ?>
                 <?php if($section_5_description): ?>
                     <p>

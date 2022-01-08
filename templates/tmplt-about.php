@@ -36,7 +36,7 @@ get_header(); ?>
         
         <div class="hero_content_inner">
             <?php if($hero_section_headline): ?>
-                <h1><?php echo $hero_section_headline; ?></h1>
+                <?php echo $hero_section_headline; ?>
             <?php endif; ?>
 
             <?php if($hero_section_link_list): ?>
@@ -86,7 +86,7 @@ get_header(); ?>
                     
                     <div class="second_section_description" id="lineage">
                         <?php if($section_2_headline): ?>
-                            <h2><?php echo $section_2_headline; ?></h2>
+                            <?php echo $section_2_headline; ?>
                         <?php endif; ?>
 
                         <?php if($section_2_subheadline): ?>
@@ -136,9 +136,7 @@ get_header(); ?>
                 <div class="right">
                     <div class="right_content">
                         <?php if($section_3_headline): ?>
-                            <h2>
-                                <?php echo $section_3_headline; ?>
-                            </h2>
+                            <?php echo $section_3_headline; ?>
                         <?php endif; ?>
                         <?php if($section_3_list): ?>
                             <ul>
@@ -183,7 +181,7 @@ get_header(); ?>
                 <div class="right">
                     <div class="right_content">
                         <?php if($section_5_headline): ?>
-                            <h2><?php echo $section_5_headline; ?></h2>
+                            <?php echo $section_5_headline; ?>
                         <?php endif; ?>
                         <?php if($section_5_subheadline): ?>
                             <h3>
