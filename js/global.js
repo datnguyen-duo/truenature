@@ -154,6 +154,7 @@
       slidesToShow: 1,
       fade: true,
       autoplay: true,
+      autoplaySpeed: 4000,
       appendArrows: $(".new_arrows"),
       prevArrow:
         '<div class="news__arrow news__arrow_dir_left"><img src="' +
